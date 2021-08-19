@@ -1,0 +1,10 @@
+@import 'colors.scss';
+
+.form{
+    &--primary {
+        background-color: $base-gray;
+        border: none;
+        border-radius: 25px;
+    
+    }
+} 

@@ -1,0 +1,21 @@
+// font import
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+
+@import 'colors.scss';
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.65;
+    color: $base-font;
+}
+
+p {
+    font-size: 16px !important;
+}

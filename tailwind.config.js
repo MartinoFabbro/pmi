@@ -7,7 +7,17 @@ module.exports = {
     },
     darkMode: 'class', // or 'media' or 'class'
     theme: {
-      extend: {},
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        gray: '#F2F6FA',
+        purple: '#5D5FEF',
+      },
+      extend: {
+        zIndex: {
+          '-10': '-10',
+         }
+      },
     },
     variants: {
       extend: {},

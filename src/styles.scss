@@ -2,3 +2,23 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+@import "scss/colors.scss";
+@import "scss/fonts.scss";
+@import "scss/tailwindover.scss";
+@import "scss/forms.scss";
+@import "scss/buttons.scss";
+
+
+
+
+
+.bg{
+    &--primary {
+        &__purple {
+        background-color: $base-purple;
+        }
+        &__gray {
+            background-color: $base-gray;
+        }
+    }
+}
