@@ -8,7 +8,7 @@
 @import "scss/forms.scss";
 @import "scss/buttons.scss";
 
-
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
 
 
 
@@ -22,3 +22,17 @@
         }
     }
 }
+
+.mde-popover-direction-arrow {
+    border-color: transparent transparent white !important;
+  }
+
+  .mat-card:not([class*=mat-elevation-z]) {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+    
+  }
+
+  .cdk-overlay-pane {
+      margin: 4px 0 !important;
+  }

@@ -2,19 +2,19 @@
 
 .btn {
     &--primary {
-        background: hsla(239, 82%, 65%, 1);
-        background: linear-gradient(0deg, hsla(239, 82%, 65%, 1) 27%, hsla(191, 62%, 50%, 1) 100%);
-        background: -moz-linear-gradient(0deg, hsla(239, 82%, 65%, 1) 27%, hsla(191, 62%, 50%, 1) 100%);
-        background: -webkit-linear-gradient(0deg, hsla(239, 82%, 65%, 1) 27%, hsla(191, 62%, 50%, 1) 100%);        
+        background: linear-gradient(0deg, hsla(239, 82%, 65%, 1)18%, hsla(191, 62%, 50%, 1) 100%);
+        background: -moz-linear-gradient(0deg, hsla(239, 82%, 65%, 1) 19%, hsla(191, 62%, 50%, 1) 100%);
+        background: -webkit-linear-gradient(0deg, hsla(239, 82%, 65%, 1) 18%, hsla(191, 62%, 50%, 1) 100%);        
         color: white;
-        border-radius: 25px;
-        height: 40px;
-        padding:0 1em;
-        font-size: .85em;
+        border-radius: 2px;
+        padding:1em 1.85em;
         overflow: hidden;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;   
+        background-size: 200% auto;    
         &:hover{
-            opacity: .7;
-            transition: .3s;
+            background-position: right center; 
+            transition: ease-in-out 0.5s; 
         }
     }
 }
