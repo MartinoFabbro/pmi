@@ -145,3 +145,18 @@
     display:none
   }
  }
+
+ .active {
+   margin-top:10px !important;
+ }
+
+ .randomClass {
+      .svg1 {
+display: none;        
+      }
+      .svg2 {
+        display: block !important;
+      transition: .3s;
+     }
+   
+ }
