@@ -2,15 +2,13 @@
 
 .btn {
     &--primary {
-        background: linear-gradient(0deg, hsla(239, 82%, 65%, 1)18%, hsla(191, 62%, 50%, 1) 100%);
-        background: -moz-linear-gradient(0deg, hsla(239, 82%, 65%, 1) 19%, hsla(191, 62%, 50%, 1) 100%);
-        background: -webkit-linear-gradient(0deg, hsla(239, 82%, 65%, 1) 18%, hsla(191, 62%, 50%, 1) 100%);        
+        background: linear-gradient(0deg, #3E00FF 18%, hsla(191, 62%, 50%, 1) 100%);
+        background: -moz-linear-gradient(0deg, #3E00FF 19%, hsla(191, 62%, 50%, 1) 100%);
+        background: -webkit-linear-gradient(0deg, #3E00FF 18%, hsla(191, 62%, 50%, 1) 100%);        
         color: white;
-        border-radius: 2px;
-        padding:1em 1.85em;
+        padding:10px 20px;
         overflow: hidden;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;   
+        font-weight: 500;   
         background-size: 200% auto;    
         &:hover{
             background-position: right center; 

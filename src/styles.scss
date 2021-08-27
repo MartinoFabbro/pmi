@@ -20,6 +20,29 @@
         &__gray {
             background-color: $base-gray;
         }
+        &__darkgray {
+            background-color: $base-gray-dark;
+        }
+        &__blue {
+            background-color: $base-blue;
+        }
+    }
+    &--gradient {
+        &__blue {
+            background: rgb(93,95,239);
+            background: linear-gradient(90deg, rgba(93,95,239,1) 45%, rgba(165,166,246,1) 100%);
+            
+
+        }
+    }
+
+    &--size {
+        &__normal {
+            background-size: 100%;
+        }
+        &__200 {
+            background-size: 200%;
+        }
     }
 }
 
@@ -41,3 +64,33 @@
  .enable {
     opacity: 1 !important;
   }
+
+.text-gradient {
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(
+-70deg
+,#3E00FF,#28FFBF);
+    -webkit-background-clip: text;
+    background-clip: text;
+   box-decoration-break: clone;
+}
+
+.highlightAppointment {
+    background: linear-gradient(0deg, #3E00FF 18%, hsla(191, 62%, 50%, 1) 100%);
+    background: -moz-linear-gradient(0deg, #3E00FF 19%, hsla(191, 62%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(0deg, #3E00FF 18%, hsla(191, 62%, 50%, 1) 100%);        
+    color: white;
+    padding: 0.25rem 0.5rem;
+    margin-left: 2rem;
+    border-radius: 25px;
+    background-size: 200% auto;    
+    opacity: .7;
+    &:hover {
+        transition: .5s;
+        color: white !important;
+        background-position: right center; 
+    }
+}
+
+
+// bg--primary__darkgray px-2 py-1 rounded-full

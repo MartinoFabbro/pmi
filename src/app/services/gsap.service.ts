@@ -18,6 +18,30 @@ public fFadeFrom(e, tym, alfa, dlay) {
   gsap.from(e, { duration: tym, opacity: alfa, ease: Power2, delay: dlay });
 }
 
+//navbar 
+
+public highLight(trigger, trigger2) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(trigger, {
+    x: "5%",
+    onStart: function() {
+      document.getElementById("appointment").classList.add('highlightAppointment');
+    },
+    onReverseComplete: function() {
+      document.getElementById("appointment").classList.remove('highlightAppointment');
+    },
+    duration: .3,
+    scrollTrigger: {
+      trigger: trigger2,
+      start: "top top", 
+      reverse: "top top",
+      toggleActions: "play none reverse reverse",
+      // toggleClass: {targets: ".my-selector", className: "active"}
+    },
+  })
+}
+
+
 public triggerSticky(trigger, endtrigger) {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.create({
@@ -37,6 +61,16 @@ public moveToRight(trigger) {
 }
 
 // initial features fade
+
+public fadePattern(trigger) {
+  gsap.from(trigger, {
+    opacity: 0, 
+    y: 10, 
+    delay: 1.2,
+    duration: 1,
+    ease: "slow(0.7, 0.7, false)"
+  });}
+
 
 public fade0(trigger) {
   gsap.from(trigger, {
@@ -78,18 +112,21 @@ public fade3(trigger) {
 public pinFeature(trigger, trigger2) {
   gsap.registerPlugin(ScrollTrigger);
   gsap.to(trigger, {
-    x: "-143%",
-    y: 600,
+    x: "-155%",
+    y: 750,
     scale: 1.8,  
-    // onStart: function() {
-    //   document.getElementById("fade-2").classList.add('randomClass');
-    // },
+    onStart: function() {
+      document.getElementById("fade-2").classList.add('randomClass');
+    },
+    onReverseComplete: function() {
+      document.getElementById("fade-2").classList.remove('randomClass');
+    },
     scrollTrigger: {
       trigger: trigger2,
       scrub: true,
       start: "top top", 
       toggleActions: "play none none none",
-      toggleClass: "randomClass",
+      toggleClass: "bg--size__normal",
     },
   })
 }
@@ -141,6 +178,61 @@ public moveextra(trigger, trigger2) {
     },
   })
 }
+
+// il prodotto
+
+public ilProdotto(trigger, trigger2) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(trigger, {
+    y: "-22%",
+    alpha: 1,
+    scrollTrigger: {
+      trigger: trigger2,
+      scrub: true,
+      start: "top top", 
+      toggleActions: "play none none none",
+    },
+  })
+}
+
+// testimonial
+
+
+public pc(trigger, trigger2) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(trigger, {
+    x: "45%",
+    alpha: 1,
+    duration: .6,
+    scrollTrigger: {
+      trigger: trigger2,
+      start: "top top", 
+      reverse: "top top",
+      toggleActions: "play none reverse reverse",
+    },
+  })
+}
+
+
+public pc2(trigger, trigger2) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(trigger, {
+    alpha: 1,
+    x: "-145%",
+    duration: .6,
+    scrollTrigger: {
+      trigger: trigger2,
+      start: "top top", 
+      reverse: "top top",
+      toggleActions: "play none reverse reverse",
+    },
+  })
+}
+
+
+
+
+
 
 
 
