@@ -29,6 +29,7 @@
                 "input": "src",
                 "output": "/"
               },
+              "_redirects",
               "src/favicon.ico",
               "src/assets"
             ],
