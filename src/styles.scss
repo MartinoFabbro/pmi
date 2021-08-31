@@ -76,6 +76,18 @@
     background-clip: text;
     box-decoration-break: clone;
 
+    &__0 {
+        -webkit-text-stroke: 2px transparent;
+        letter-spacing: .125rem;
+        -webkit-text-fill-color: white;
+        background: -webkit-linear-gradient(
+    -70deg
+    ,#4e1ddf,#28FFBF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        box-decoration-break: clone;
+    }
+
     &__2 {
         -webkit-text-stroke: 2px transparent;
         letter-spacing: .125rem;
@@ -83,6 +95,18 @@
         background: -webkit-linear-gradient(
     -70deg
     ,#2047f4,#28FFBF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        box-decoration-break: clone;
+    }
+    
+    &__3 {
+        -webkit-text-stroke: 2px transparent;
+        letter-spacing: .125rem;
+        -webkit-text-fill-color: white;
+        background: -webkit-linear-gradient(
+    -70deg
+    ,#052cd8,#48fa83);
         -webkit-background-clip: text;
         background-clip: text;
         box-decoration-break: clone;
@@ -130,3 +154,19 @@
     top: .25rem;
     position: absolute;
 }
+
+// #feature {
+//     &-1:hover {
+//         transform: translateY(-5px);
+//         transition: transform .3s;
+//     } 
+//     &-2:hover {
+//         transform: translateY(5px) ;
+//     } 
+//     &-3:hover {
+//         transform: translateY(5px) ;
+//     } 
+//     &-4:hover {
+//         transform: translateY(5px) ;
+//     } 
+// }

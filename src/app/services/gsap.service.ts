@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { TimelineMax } from 'gsap/all';
 import { ScrollToPlugin } from 'gsap/all';
 import { ScrollTrigger } from 'gsap/all';
-import { gsap, Power2, Elastic } from 'gsap/all';
+import { gsap, Power2, Elastic, TweenMax } from 'gsap/all';
 
 
 declare var $:JQueryStatic;
@@ -229,13 +230,16 @@ public pc2(trigger, trigger2) {
   })
 }
 
+public setFeature() {
+  $(".item").each(function(i, el) {
 
-
-
-
-
-
-
-
+    //create the event handler
+    $(el).on("mouseenter",function(){
+      gsap.to(el, {y: -10, duration: .3});
+    }).on("mouseleave",function(){
+      gsap.to(el, {y: 0, duration: .3});
+    });
+  })
+}
 
 }

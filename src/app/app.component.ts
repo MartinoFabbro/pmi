@@ -22,7 +22,8 @@ export class AppComponent {
     this.moveTo();
     this.ilProdotto();
     this.pc();
-    this.highLight()
+    this.highLight();
+    this.setItem();
     }
 
  
@@ -100,7 +101,10 @@ public highLight() {
 }
 
 
-
+public setItem() {
+  const anim = this._gsapService;
+  anim.setFeature()
+}
 
 
 // public triggerSticky() {
