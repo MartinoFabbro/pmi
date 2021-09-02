@@ -197,3 +197,14 @@
     height: 700px;
     transform: rotate(10deg);
 }
+
+// width loop
+
+
+$wides: 30rem, 31rem, 32rem, 33rem, 34rem, 35rem, 36rem, 37rem, 38rem, 39rem;
+
+@each $wide in $wides {
+  .w-#{$wide} {
+    width: $wide !important;
+  }
+}
