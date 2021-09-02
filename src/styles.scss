@@ -26,6 +26,7 @@
         &__blue {
             background-color: $base-blue;
         }
+
     }
     &--gradient {
         &__blue {
@@ -111,6 +112,18 @@
         background-clip: text;
         box-decoration-break: clone;
     }
+
+    &__4 {
+        -webkit-text-stroke: 2px transparent;
+        letter-spacing: .125rem;
+        -webkit-text-fill-color: $base-gray;
+        background: -webkit-linear-gradient(
+    -70deg
+    ,#71D4C9,#1D7463);
+        -webkit-background-clip: text;
+        background-clip: text;
+        box-decoration-break: clone;
+    }
 }
 
 .highlightAppointment {
@@ -149,24 +162,38 @@
     }
 }
 
+.skewBg__2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: 100% 0;
+    transform: skewY(7deg);
+    background: $base-gray;
+    overflow: hidden;
+
+    .unskw {
+    transform: skewY(-7deg);
+    }
+}
+
 .subtitle_ball {
     left: -.25rem;
     top: .25rem;
     position: absolute;
 }
 
-// #feature {
-//     &-1:hover {
-//         transform: translateY(-5px);
-//         transition: transform .3s;
-//     } 
-//     &-2:hover {
-//         transform: translateY(5px) ;
-//     } 
-//     &-3:hover {
-//         transform: translateY(5px) ;
-//     } 
-//     &-4:hover {
-//         transform: translateY(5px) ;
-//     } 
-// }
+.item {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+}
+
+.square {
+    position: absolute;
+    top: -20% !important;
+    right: -20%;
+    width: 700px;
+    height: 700px;
+    transform: rotate(10deg);
+}
