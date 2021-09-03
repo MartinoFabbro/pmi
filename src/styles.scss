@@ -127,9 +127,9 @@
 }
 
 .highlightAppointment {
-    background: linear-gradient(0deg, #3E00FF 18%, hsla(191, 62%, 50%, 1) 100%);
-    background: -moz-linear-gradient(0deg, #3E00FF 19%, hsla(191, 62%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(0deg, #3E00FF 18%, hsla(191, 62%, 50%, 1) 100%);        
+    background: linear-gradient(0deg, #3E00FF 8%, hsla(191, 62%, 50%, 1) 100%);
+    background: -moz-linear-gradient(0deg, #3E00FF 8%, hsla(191, 62%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(0deg, #3E00FF 8%, hsla(191, 62%, 50%, 1) 100%);        
     color: white;
     padding: 0.25rem 0.5rem;
     margin-left: 2rem;
@@ -192,10 +192,9 @@
 .square {
     position: absolute;
     top: -20% !important;
-    right: -20%;
-    width: 700px;
+    right: -40%;
+    width: 700px;   
     height: 700px;
-    transform: rotate(10deg);
 }
 
 // width loop

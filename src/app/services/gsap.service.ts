@@ -124,7 +124,7 @@ public pinFeature(trigger, trigger2) {
     },
     scrollTrigger: {
       trigger: trigger2,
-      scrub: true,
+      scrub: 0.5,
       start: "top top", 
       toggleActions: "play none none none",
       toggleClass: "bg--size__normal",
@@ -239,6 +239,35 @@ public setFeature() {
     }).on("mouseleave",function(){
       gsap.to(el, {y: 0, duration: .3});
     });
+  })
+}
+
+public moveInTipiem(trigger, trigger2) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(trigger, {
+    x: "-35%",
+    rotation:10,
+    scrollTrigger: {
+      trigger: trigger2,
+      scrub: 1,
+      start: "top bottom", 
+      reverse: "top top",
+      toggleActions: "play none none none",
+    },
+  })
+}
+
+public moveInTipiemText(trigger, trigger2) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(trigger, {
+    x: "-100%",
+    scrollTrigger: {
+      trigger: trigger2,
+      scrub: 1,
+      start: "top bottom", 
+      reverse: "top top",
+      toggleActions: "play none none none",
+    },
   })
 }
 

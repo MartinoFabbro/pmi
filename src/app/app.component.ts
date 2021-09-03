@@ -24,6 +24,9 @@ export class AppComponent {
     this.pc();
     this.highLight();
     this.setItem();
+    this.moveInTipiem();
+    this.moveInTipiem2();
+
     }
 
  
@@ -104,6 +107,22 @@ public highLight() {
 public setItem() {
   const anim = this._gsapService;
   anim.setFeature()
+}
+
+public moveInTipiem() {
+  const anim = this._gsapService;
+  const trigger = '.moveInTipiem';
+  const trigger1 = '.triggerTipiem';
+  anim.moveInTipiem(trigger, trigger1)
+
+}
+
+public moveInTipiem2() {
+  const anim = this._gsapService;
+  const trigger1 = '.triggerTipiem';
+  const trigger = '.moveInTipiemText';
+  anim.moveInTipiemText(trigger, trigger1)
+
 }
 
 
