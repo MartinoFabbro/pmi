@@ -51,6 +51,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MdePopoverModule } from '@material-extended/mde';
 import { FooterComponent } from './footer/footer.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,

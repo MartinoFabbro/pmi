@@ -12,6 +12,7 @@ declare var $:JQueryStatic;
 providedIn: 'root'
 })
 export class GsapService {
+
 /*---=| GSAP v3 Animation Engine |=---*/
  
 /*--=| Fade From |=--*/
@@ -124,7 +125,7 @@ public pinFeature(trigger, trigger2) {
     },
     scrollTrigger: {
       trigger: trigger2,
-      scrub: 0.5,
+      scrub: true,
       start: "top top", 
       toggleActions: "play none none none",
       toggleClass: "bg--size__normal",
@@ -269,6 +270,12 @@ public moveInTipiemText(trigger, trigger2) {
       toggleActions: "play none none none",
     },
   })
+}
+
+// kill service
+
+public killBIll() {
+  ScrollTrigger.getAll().forEach(t => t.kill());
 }
 
 }
