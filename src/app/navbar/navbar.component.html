@@ -2,8 +2,18 @@
 <div class="flex bg--primary__gray px-4 mx-1 py-2 rounded-sm z-50 fixed">
     <img src="/assets/images/Logo_Supplean.png" class="w-24 self-center mt-0.5 pr-2 cursor-pointer"  alt="Logo" routerLink="home">
     <p class="self-center mx-2 hover:text-black cursor-pointer bg-gray-200 rounded-sm py-1 px-2" routerLink="pricing" >Pricing</p>
-    <p class="self-center mx-2 hover:text-black cursor-pointer py-1">Blog</p>
-    <p class="self-center mx-2 hover:text-black cursor-pointer py-1">Consulenza</p>
-    <p class="self-center ml-2 hover:text-black cursor-pointer py-1 appointment" id="appointment">Fissa un appuntamento</p>
+    <p class="self-center mx-2 hover:text-black cursor-pointer   rounded-sm py-1 px-2" routerLink="features" >Funzionalità</p>
+    <div class="dropdown inline-block relative">
+        <button class="self-center mx-2 hover:text-black cursor-pointer py-1 flex">
+          <p class="mr-1">Risorse</p>
+          <svg class="fill-current h-4 w-4 self-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+        </button>
+        <ul class="dropdown-menu absolute hidden pt-1">
+          <li class=""><p class="rounded-t bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap cursor-pointer">Blog</p></li>
+          <li class=""><p class="bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap rounded-b cursor-pointer">Consulenza</p></li>
+        </ul>
+      </div>
+    <p class="self-center ml-2 hover:text-black cursor-pointer py-1 appointment" id="appointment">Contattaci</p>
+      
 </div>
 </div>

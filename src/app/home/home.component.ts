@@ -3,6 +3,7 @@ import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 import { GsapService } from '../services/gsap.service';
 import { ScrollToPlugin } from 'gsap/all';
 import { ScrollTrigger } from 'gsap/all';
+import { animate } from '@angular/animations';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.ilProdotto();
     this.pc();
     this.highLight();
-    this.setItem();
+    // this.setItem();
     this.moveInTipiem();
     this.moveInTipiem2();
   }
@@ -132,6 +133,5 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     anim.moveInTipiemText(trigger, trigger1)
   
   }
-  
 
 }

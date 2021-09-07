@@ -218,3 +218,6 @@ $wides: 30rem, 31rem, 32rem, 33rem, 34rem, 35rem, 36rem, 37rem, 38rem, 39rem;
   }
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block !important;
+  }
