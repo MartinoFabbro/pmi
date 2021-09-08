@@ -17,12 +17,12 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(private _gsapService: GsapService) { } // inject service
 
   ngAfterViewInit(): void {
-    this.fadeIn1();
-    this.pinFeature();    
-    this.move1();
-    this.move2();
-    this.moveextra();
-    this.moveTo();
+    // this.fadeIn1();
+    // this.pinFeature();    
+    // this.move1();
+    // this.move2();
+    // this.moveextra();
+    // this.moveTo();
     this.ilProdotto();
     this.pc();
     this.highLight();

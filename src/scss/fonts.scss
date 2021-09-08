@@ -25,7 +25,7 @@ p {
 
 .text {
     &-purple {
-        color: $base-purple
+        color: $base-purple !important
     }
     &-gray {
         color: $base-gray-dark
