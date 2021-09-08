@@ -2,17 +2,29 @@
 
 .btn {
     &--primary {
-        background: linear-gradient(0deg, #3E00FF 10%, hsla(191, 62%, 50%, 1) 100%);
-        background: -moz-linear-gradient(0deg, #3E00FF 10%, hsla(191, 62%, 50%, 1) 100%);
-        background: -webkit-linear-gradient(0deg, #3E00FF 10%, hsla(191, 62%, 50%, 1) 100%);        
+        background: #4302F5;
         color: white;
         padding:10px 20px;
         overflow: hidden;
         font-weight: 500;   
         background-size: 120% auto;    
         &:hover{
-            background-position: right center; 
-            transition: ease-in-out 0.5s; 
+            background: #595FC1;
+        }
+    }
+    &--secondary {
+        border: solid 1px #4302F5;
+        background: transparent;
+        color: inherit;
+        padding:10px 20px;
+        overflow: hidden;
+        font-weight: 500;   
+        background-size: 120% auto;   
+        transition: .3s; 
+        &:hover{
+            background: white;
+            color:black;
+            border: solid 1px black;
         }
     }
     &--tertiary{

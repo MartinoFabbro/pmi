@@ -74,20 +74,30 @@
     -webkit-text-stroke: 2px transparent;
     letter-spacing: .125rem;
     -webkit-text-fill-color: $base-gray;
-    background: -webkit-linear-gradient(
--70deg
-,#3E00FF,#28FFBF);
+    background: #9796f0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     -webkit-background-clip: text;
     background-clip: text;
     box-decoration-break: clone;
 
+    &__full {
+        background: #9796f0; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
+    }
     &__0 {
         -webkit-text-stroke: 2px transparent;
         letter-spacing: .125rem;
         -webkit-text-fill-color: white;
-        background: -webkit-linear-gradient(
-    -70deg
-    ,#4e1ddf,#28FFBF);
+        background: #9796f0; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         -webkit-background-clip: text;
         background-clip: text;
         box-decoration-break: clone;
@@ -97,9 +107,10 @@
         -webkit-text-stroke: 2px transparent;
         letter-spacing: .125rem;
         -webkit-text-fill-color: $base-gray;
-        background: -webkit-linear-gradient(
-    -70deg
-    ,#2047f4,#28FFBF);
+        background: #9796f0; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         -webkit-background-clip: text;
         background-clip: text;
         box-decoration-break: clone;
@@ -109,9 +120,10 @@
         -webkit-text-stroke: 2px transparent;
         letter-spacing: .125rem;
         -webkit-text-fill-color: white;
-        background: -webkit-linear-gradient(
-    -70deg
-    ,#052cd8,#48fa83);
+        background: #9796f0; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         -webkit-background-clip: text;
         background-clip: text;
         box-decoration-break: clone;
@@ -121,9 +133,10 @@
         -webkit-text-stroke: 2px transparent;
         letter-spacing: .125rem;
         -webkit-text-fill-color: $base-gray;
-        background: -webkit-linear-gradient(
-    -70deg
-    ,#71D4C9,#1D7463);
+        background: #9796f0; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         -webkit-background-clip: text;
         background-clip: text;
         box-decoration-break: clone;
