@@ -15,4 +15,14 @@
             transition: ease-in-out 0.5s; 
         }
     }
+    &--tertiary{
+        background: transparent;
+        color: white;
+        overflow: hidden;
+        font-weight: 500;   
+        background-size: 120% auto;    
+        &:hover{
+            opacity: .7;
+        }
+    }
 }

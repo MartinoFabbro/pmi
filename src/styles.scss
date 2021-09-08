@@ -18,6 +18,11 @@
         }
         &__gray {
             background-color: $base-gray;
+            &__gradient{
+                background: #9796f0; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                          }
         }
         &__darkgray {
             background-color: $base-gray-dark;
@@ -221,3 +226,8 @@ $wides: 30rem, 31rem, 32rem, 33rem, 34rem, 35rem, 36rem, 37rem, 38rem, 39rem;
 .dropdown:hover .dropdown-menu {
     display: block !important;
   }
+
+
+.border-bottom {
+    border-bottom-width: 1px;
+}
