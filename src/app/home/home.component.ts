@@ -99,7 +99,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     const anim = this._gsapService;
     const trigger = '.pc';
     const trigger1 = '.pc2';
-    const trigger2 = '.fadeextra'
+    const trigger2 = '#inline-full-name'
     anim.pc(trigger, trigger2);
     anim.pc2(trigger1, trigger2);
   }
