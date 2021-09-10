@@ -227,13 +227,15 @@
 // width loop
 
 
-$wides: 30rem, 31rem, 32rem, 33rem, 34rem, 35rem, 36rem, 37rem, 38rem, 39rem;
+  
+    $wides: 30rem, 31rem, 32rem, 33rem, 34rem, 35rem, 36rem, 37rem, 38rem, 39rem;
 
-@each $wide in $wides {
-  .w-#{$wide} {
-    width: $wide !important;
-  }
-}
+    @each $wide in $wides {
+      .w-#{$wide} {
+        width: $wide !important;
+      }
+    }        
+
 
 .dropdown:hover .dropdown-menu {
     display: block !important;

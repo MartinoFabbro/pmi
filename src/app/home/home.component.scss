@@ -160,11 +160,24 @@ display: none;
      }
    
  }
- 
- .decoration {
-  right: 0px;
+
+
+ @media (min-width: 1281px) {
+  
+  .decoration {
+    right: 0px;
+    top: -50px;
+    transform: rotate(
+  90deg
+  );
+   }  
+}
+
+.decoration {
+  right: 20px;
   top: -50px;
   transform: rotate(
 90deg
 );
- }
+ }  
+

@@ -1,5 +1,5 @@
 <div class="container border-gray mx-auto flex items-center justify-between h-16 md:h-20 py-4 mb-16 sm:mb-20 px-4">
-<div class="flex bg--primary__gray px-4 mx-1 py-2 rounded-sm z-50 fixed">
+<div class="bg--primary__gray px-4 mx-1 py-2 rounded-sm z-50 fixed md:flex hidden">
     <img src="/assets/images/Logo_Supplean.png" class="w-24 self-center mt-0.5 pr-2 cursor-pointer"  alt="Logo" routerLink="home">
     <p class="self-center mx-2 hover:text-black cursor-pointer bg-gray-200 rounded-sm py-1 px-2" routerLink="pricing" >Pricing</p>
     <p class="self-center mx-2 hover:text-black cursor-pointer   rounded-sm py-1 px-2" routerLink="features" >Funzionalità</p>
@@ -16,4 +16,22 @@
     <p class="self-center ml-2 hover:text-black cursor-pointer py-1 appointment" id="appointment">Contattaci</p>
       
 </div>
+
+<div class="flex justify-between bg--primary__gray px-4 mx-1 py-2 rounded-sm z-50 relative md:hidden w-full">
+  <img src="/assets/images/Logo_Supplean.png" class="w-24 self-center mt-0.5 pr-2 cursor-pointer"  alt="Logo" routerLink="home">
+  <div class="dropdown inline-block relative">
+      <button class="self-center mx-2 hover:text-black cursor-pointer py-1 flex">
+        <p class="mr-1">Informazioni</p>
+        <svg class="fill-current h-4 w-4 self-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+      </button>
+      <ul class="dropdown-menu absolute hidden pt-1">
+        <li class=""><p class="rounded-t bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap cursor-pointer" routerLink="pricing">Pricing</p></li>
+        <li class=""><p class="bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap cursor-pointer" routerLink="features">Funzionalità</p></li>
+        <li class=""><p class="bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap cursor-pointer">Blog</p></li>
+        <li class=""><p class="bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap rounded-b cursor-pointer">Consulenza</p></li>
+      </ul>
+    </div>    
+</div>
+
+
 </div>
