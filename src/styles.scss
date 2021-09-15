@@ -19,10 +19,9 @@
         &__gray {
             background-color: $base-gray;
             &__gradient{
-                background: #9796f0; /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                          }
+                background: rgb(255,255,255);
+                background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(242,246,250,1) 65%);
+                                          }
         }
         &__darkgray {
             background-color: $base-gray-dark;
@@ -244,4 +243,10 @@
 
 .border-bottom {
     border-bottom-width: 1px;
+}
+
+.tipiem-bg {
+    background: #9796f0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
