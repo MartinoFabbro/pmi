@@ -181,3 +181,8 @@ display: none;
 );
  }  
 
+ .hover-feature:hover {
+   .title-feature {
+     color: $base-blue !important
+   }
+ }
