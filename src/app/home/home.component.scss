@@ -94,7 +94,7 @@
   }
 
   @keyframes spin {
-    0% { content:"Il tuo albo fornitori"; }
+    0% { content:"I tuoi fornitori"; }
     33% { content:"Il procurement"; }
     66% { content: "I tuoi acquisti"; }
     100% { content: "La tua azienda"; }
@@ -165,8 +165,8 @@ display: none;
  @media (min-width: 1281px) {
   
   .decoration {
-    right: 0px;
-    top: -50px;
+    right: 10px;
+    top: -75px;    
     transform: rotate(
   90deg
   );
@@ -174,9 +174,9 @@ display: none;
 }
 
 .decoration {
-  right: 20px;
-  top: -50px;
-  transform: rotate(
+  right: 10px;
+  top: -75px;    
+transform: rotate(
 90deg
 );
  }  

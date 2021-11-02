@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'pricing', component: PricingComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**',   redirectTo: '' }
+  { path: '**',   redirectTo: '/home' }
 ];
 
 @NgModule({
