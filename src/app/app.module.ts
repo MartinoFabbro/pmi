@@ -52,6 +52,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MdePopoverModule } from '@material-extended/mde';
 import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { PricingComponent } from './pricing/pricing.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgsRevealModule,
     A11yModule,
     ClipboardModule,
     CdkStepperModule,

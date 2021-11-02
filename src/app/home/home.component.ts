@@ -4,6 +4,7 @@ import { GsapService } from '../services/gsap.service';
 import { ScrollToPlugin } from 'gsap/all';
 import { ScrollTrigger } from 'gsap/all';
 import { animate } from '@angular/animations';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 
 @Component({
