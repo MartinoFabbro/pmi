@@ -197,6 +197,22 @@ public ilProdotto(trigger, trigger2) {
   })
 }
 
+//prospettiva 
+
+public unprospect(trigger) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(trigger, {
+    transform: "perspective(1000px) rotateX(-10deg)",
+    scrollTrigger: {
+      trigger: trigger,
+      scrub: true,
+      toggleClass: "active",
+      start: "top bottom", 
+      transform: "perspective(1000px) rotateX(0deg)",
+      toggleActions: "play none none none",
+    },
+  })
+}
 // testimonial
 
 

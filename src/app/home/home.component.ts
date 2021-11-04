@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     // this.move2();
     // this.moveextra();
     // this.moveTo();
+    this.unprospect();
     this.ilProdotto();
     this.pc();
     this.highLight();
@@ -103,6 +104,12 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     const trigger2 = '#inline-full-name'
     anim.pc(trigger, trigger2);
     anim.pc2(trigger1, trigger2);
+  }
+
+  public unprospect() {
+    const anim = this._gsapService;
+    const trigger = '.prospect';
+    anim.unprospect(trigger);
   }
   
   

@@ -30,6 +30,12 @@ p {
     &-gray {
         color: $base-gray-dark
     }
+    &-primary {
+        color: $base-blue !important;
+        &__yellow {
+        color: $base-yellow !important;
+        }
+    }
 }
 
 .font-poppins {

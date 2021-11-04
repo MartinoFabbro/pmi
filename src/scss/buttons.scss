@@ -2,29 +2,32 @@
 
 .btn {
     &--primary {
-        background: #4302F5;
-        color: white;
+        background: white;
+        color: #097A9C;;
+        border: solid 2px #FEB000;;
         padding:10px 20px;
         overflow: hidden;
         font-weight: 500;   
         background-size: 120% auto;    
         &:hover{
-            background: #595FC1;
+           background: #097A9C;
+           color: #FEB000;
+           transition: .2s;
         }
     }
     &--secondary {
-        border: solid 1px #4302F5;
         background: transparent;
-        color: inherit;
+        color: #FEB000;;
+        border: solid 2px #FEB000;;
         padding:10px 20px;
         overflow: hidden;
         font-weight: 500;   
-        background-size: 120% auto;   
-        transition: .3s; 
+        background-size: 120% auto;    
         &:hover{
-            background: white;
-            color:black;
-            border: solid 1px black;
+           background: white;
+           border: solid 2px #097A9C;
+           color: #097A9C;
+           transition: .2s;
         }
     }
     &--tertiary{

@@ -73,9 +73,9 @@
     -webkit-text-stroke: 4px transparent;
     letter-spacing: .225rem;
     -webkit-text-fill-color: $base-gray;
-    background: #9796f0; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #1ba5cd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0c647f, #1ba5cd); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0c647f, #1ba5cd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     -webkit-background-clip: text;
     background-clip: text;
@@ -90,13 +90,10 @@
       
     }
     &__0 {
-        -webkit-text-stroke: 4px transparent;
+        -webkit-text-stroke: 4px white;
         letter-spacing: .225rem;
-        -webkit-text-fill-color: white;
-        background: #9796f0; /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #9796f0, #fbc7d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+        -webkit-text-fill-color: #09627D;
+        background: #09627D; /* fallback for old browsers */
         -webkit-background-clip: text;
         background-clip: text;
         box-decoration-break: clone;
@@ -256,4 +253,8 @@
 
 .main-bg {
     background-color: #F2F6FA !important;
+}
+
+.scale {
+    transform: scale(1.5);
 }
