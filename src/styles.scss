@@ -36,12 +36,17 @@ h1 {
     }
     &--gradient {
         &__blue {
-            background: rgb(93,95,239);
-            background: linear-gradient(90deg, rgba(93,95,239,1) 45%, rgba(165,166,246,1) 100%)
+            background: rgb(245,246,251);
+            background: linear-gradient(90deg, rgba(245,246,251,1) 10%, #BFD9E5 100%);
         }
         &__highlight {
             background: rgb(255,190,6);
             background: linear-gradient(27090deg, rgba(255,190,6,1) 0%, rgba(246,146,30,1) 100%);        
+        }
+
+        &__yellow {
+            background: rgb(245,246,251);
+            background: linear-gradient(90deg, rgba(245,246,251,1) 10%, rgba(247,235,201,1) 100%);
         }
     }
 
