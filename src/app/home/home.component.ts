@@ -4,7 +4,7 @@ import { GsapService } from '../services/gsap.service';
 import { ScrollToPlugin } from 'gsap/all';
 import { ScrollTrigger } from 'gsap/all';
 import { animate } from '@angular/animations';
-import {NgsRevealModule} from 'ngx-scrollreveal';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 
 @Component({
@@ -15,7 +15,7 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
 export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
 
-  constructor(private _gsapService: GsapService) { } // inject service
+  constructor(private _gsapService: GsapService, private route:ActivatedRoute,private router:Router) { } // inject service
 
   ngAfterViewInit(): void {
     // this.fadeIn1();
@@ -40,6 +40,10 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnDestroy(): void {
     this._gsapService.killBIll();
   }
+
+  onboarding(){
+		this.router.navigate(['/onboarding']); // navigate to other page
+	}
 
   public fadeIn1() {
     const anim = this._gsapService;

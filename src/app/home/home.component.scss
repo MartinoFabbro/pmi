@@ -197,6 +197,11 @@ transform: rotate(
   background-image: url("../../assets/images/hero.png");
 }
 
+.tipiem-bg {
+  background-image: url("../../assets/images/bgtp.png");
+  background-size: cover;
+}
+
 .prospect {
   -webkit-transform: perspective(1000px) rotateX(
     25deg
@@ -211,7 +216,7 @@ transform: rotate(
 
 .stroke-white {
   color: transparent !important;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 }
 

@@ -53,6 +53,7 @@ import { MdePopoverModule } from '@material-extended/mde';
 import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
+import { OnboardingComponent } from './onboarding/onboarding.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    PricingComponent
+    PricingComponent,
+    OnboardingComponent
   ],
   imports: [
     BrowserModule,
