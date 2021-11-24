@@ -1,4 +1,20 @@
 @import "../../scss/colors.scss";
+@import "../../../node_modules/include-media/dist/include-media";
+
+$breakpoints: (phone: 640px, 
+               tablet: 768px, 
+               desktop: 1024px) !default;
+
+@include media(">=phone", "<tablet") {
+  .hero {
+    background-image: url("../../assets/images/herom.png");
+  }
+}       
+@include media(">=tablet") {
+  .hero {
+    background-image: url("../../assets/images/hero.png");
+}
+}
 
 @keyframes w1anim {
     0%{
@@ -193,9 +209,6 @@ transform: rotate(
 }
 
 
-.hero {
-  background-image: url("../../assets/images/hero.png");
-}
 
 .tipiem-bg {
   background-image: url("../../assets/images/bgtp.png");

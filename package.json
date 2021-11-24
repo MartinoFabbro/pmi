@@ -26,6 +26,7 @@
     "daisyui": "^1.13.0",
     "font-awesome": "^4.7.0",
     "gsap": "^3.7.1",
+    "include-media": "^1.4.10",
     "jquery": "^3.6.0",
     "ngx-scrollreveal": "^3.0.0",
     "rxjs": "~6.6.0",

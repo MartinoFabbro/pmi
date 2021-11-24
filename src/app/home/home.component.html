@@ -1,15 +1,17 @@
-    <section class="bg--primary__gray__gradient border-bottom-line">
-    <div class="container-2xl mx-auto pb-20">
+    <section class="bg--primary__gray__gradient border-bottom-line px-2 md:px-0">
+    <div class="container-2xl mx-auto md:pb-20">
 
       <div class="hero w-full rounded-2xl relative">
-        <div class="px-16 py-24 rounded-md mx-3 md:mx-0">
+        <div class="md:px-16 px-4 md:py-24 py-6 rounded-md mx-3 md:mx-0">
           <h1 class="text-4xl font-semibold  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight text-white">Digitalizza </h1>
-          <h1 class="text-4xl font-extrabold  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight mt-3 stroke-white h-20 z-10 relative" style="width: fit-content;" id="spin"></h1>
-          <p class="mb-10 lg:mt-6 md:w-3/6 sm:w-100 text-xl text-white">
+          <h1 class="text-4xl font-extrabold  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight mt-3 stroke-white h-20 z-10 relative hidden md:block" style="width: fit-content;" id="spin"></h1>
+          <h1 class="text-4xl font-extrabold  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight mt-3 stroke-white h-20 z-10 relative block md:hidden" style="width: fit-content;">Gli acquisti aziendali</h1>
+
+          <p class="md:mb-10 mb-4 lg:mt-6 md:w-3/6 sm:w-100 text-xl text-white mt-12 md:mt-0">
             Trasformiamo il tuo modo di lavorare semplificando e <span>strutturando</span> gli acquisti aziendali e la gestione dei fornitori.
           </p>
           <div id="form-sub">
-          <form class="w-full sticky top-0 mb-10" id="trigger-product" >
+          <form class="w-full sticky top-0 mb-48 " id="trigger-product" >
             <div class="md:flex hidden items-center">
             <div class="w-6/12 md:items-center">
                 <input class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
@@ -20,17 +22,17 @@
           </div>
           <div class="md:hidden items-center">
             <div class="md:flex md:items-center">
-                <input class="form--primary opacity-70	 rounded-sm bg-gray-100 border-none h-12 w-full tracking-wide" id="inline-full-name" (click)=onboarding() type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
+                <input class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
             </div>
-                <button class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative"  type="button">
+                <button class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative"  (click)=onboarding()  type="button">
                   Scopri
                 </button>
           </div>
           </form>
         </div>
-        <div class="bg-gray-100 rounded-lg p-6 absolute -right-10 bottom-16 w-5/12 font-bold flex shadow-xl">
+        <div class="bg-gray-100 rounded-lg md:p-6 p-2 md:absolute relative md:-right-10 md:bottom-16 md:w-5/12 font-bold flex shadow-xl">
           <div>
-            <img src="../../assets/images/quote.svg" alt="virgolette" class="w-24 px-3">
+            <img src="../../assets/images/quote.svg" alt="virgolette" class="md:w-24 w-40 px-3">
           </div>
           <div class="pt-2">
             <span class="pt-2 text-primary">
@@ -46,26 +48,26 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto pb-24 mt-12 md:flex justify-around opacity-80">
-      <div class="">
-        <h1 class="text-2xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary">2.500 +</h1>
+    <div class="container mx-auto md:pb-24 pb-12 mt-12 md:flex justify-around opacity-80">
+      <div class="md:my-0 my-4">
+        <h1 class="text-2xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center">2.500 +</h1>
         <p class="pt-2 text-gray-400 text-center ">Fornitori Censiti</p>
       </div>
-      <div class="">
-        <h1 class="text-2xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary"> 99,9 % </h1>
+      <div class="md:my-0 my-4">
+        <h1 class="text-2xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center "> 99,9 % </h1>
         <p class="pt-2 text-gray-400 text-center ">Fornitori Censiti</p>
       </div>
-      <div class="">
-        <h1 class="text-2xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary">10.000 + </h1>
+      <div class="md:my-0 my-4">
+        <h1 class="text-2xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center">10.000 + </h1>
         <p class="pt-2 text-gray-400 text-center ">Fornitori Censiti</p>
       </div>
-      <div class="">
+      <div class="md:my-0 my-4">
         <h1 class="text-2xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center"><span class="text-3xl">#</span>  1 </h1>
         <p class="pt-2 text-gray-400 text-center ">Fornitori Censiti</p>
       </div>
     </div>
     </section>
-    <section class="bg--primary__gray overflow-hidden pt-24 relative">
+    <section class="bg--primary__gray overflow-hidden md:pt-24 pt-12 relative">
       <div class="mx-auto text-center -mb-12">
         <h1 class="text-3xl font-semibold text-primary mb-20  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight">Concentrati sul tuo core business <br> Lascia fare a <span class="text-gradient font-extrabold">PRO24</span> il resto </h1>
       </div>
@@ -84,7 +86,7 @@
 
     </section>
     <section>
-      <div class="bg--primary__gray pt-24">
+      <div class="bg--primary__gray md:pt-24 pt-12">
         <div class="md:py-12 py-6">
         <div class="container mx-auto px-5">
           <div class="mb-12">
@@ -93,11 +95,11 @@
           </div>
         </div>
         <section>
-      <div class="bg--gradient__yellow py-24"> 
+      <div class="bg--gradient__yellow md:py-24 py-12"> 
       <div class="container-2xl mx-auto px-5">
-          <div class="p-5">
+          <div class="md:p-5">
             <div class="md:flex">
-            <div class="md:w-6/12 mx-5">
+            <div class="md:w-6/12 md:mx-5">
               <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Albo fornitori digitale</h1>                
               <p class="text-gray-900 leading-7">
                 Vivamus placerat condimentum libero, nec fringilla mi porttitor vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu luctus enim. Aenean lacinia, ex sed mollis egestas, ligula ligula aliquet lorem, vel pellentesque neque diam eget nulla. Fusce suscipit lacus nisl, ut pulvinar dolor tempor volutpat. Vivamus facilisis placerat diam ut blandit.
@@ -106,21 +108,21 @@
                 Scopri <span class="arrow absolute pl-1">→</span>
               </button> 
               <div class="md:flex mt-16">
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
                     Integer et purus sit amet leo
                     vestibulum commodo.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
                     Integer et purus sit amet leo
                     vestibulum commodo.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
@@ -129,7 +131,7 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12 mx-5">
+            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12 md:mx-5">
             <div class="">
               <object type="image/svg+xml" data="../../assets/images/Fornitori.svg" alt="Feature 1">
               </object>
@@ -139,10 +141,10 @@
           </div>
       </div>
       </div>
-        <div class="container-2xl mx-auto p-5">
-          <div class="px-5 py-24">
+        <div class="container-2xl mx-auto p-5 md:py-24 py-12">
+          <div class="md:p-5">
             <div class="md:flex">
-            <div class="md:w-6/12 mx-5">
+            <div class="md:w-6/12 md:mx-5">
               <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Automazione degli ordini</h1>                
               <p class="text-gray-900 leading-7">
                 Vivamus placerat condimentum libero, nec fringilla mi porttitor vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu luctus enim. Aenean lacinia, ex sed mollis egestas, ligula ligula aliquet lorem, vel pellentesque neque diam eget nulla. Fusce suscipit lacus nisl, ut pulvinar dolor tempor volutpat. Vivamus facilisis placerat diam ut blandit.
@@ -151,21 +153,21 @@
                 Scopri <span class="arrow absolute pl-1">→</span>
               </button> 
               <div class="md:flex mt-16">
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
                     Integer et purus sit amet leo
                     vestibulum commodo.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
                     Integer et purus sit amet leo
                     vestibulum commodo.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
@@ -174,7 +176,7 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12 mx-5">
+            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12 md:mx-5">
             <div class="">
               <object type="image/svg+xml" data="../../assets/images/Fornitori.svg" alt="Feature 1">
               </object>
@@ -185,11 +187,11 @@
         <div>
         </div>
         </div>
-        <div class="bg--gradient__blue py-24">
-        <div class="container-2xl mx-auto px-5">
-          <div class="p-5">
-            <div class="md:flex">
-            <div class="md:w-6/12 mx-5">
+        <div class="bg--gradient__yellow md:py-24 py-12"> 
+          <div class="container-2xl mx-auto px-5">
+            <div class="md:p-5">
+              <div class="md:flex">
+              <div class="md:w-6/12 md:mx-5">
               <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Processi approvativi personalizzati </h1>                
               <p class="text-gray-900 leading-7">
                 Vivamus placerat condimentum libero, nec fringilla mi porttitor vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu luctus enim. Aenean lacinia, ex sed mollis egestas, ligula ligula aliquet lorem, vel pellentesque neque diam eget nulla. Fusce suscipit lacus nisl, ut pulvinar dolor tempor volutpat. Vivamus facilisis placerat diam ut blandit.
@@ -198,21 +200,21 @@
                 Scopri <span class="arrow absolute pl-1">→</span>
               </button> 
               <div class="md:flex mt-16">
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
                     Integer et purus sit amet leo
                     vestibulum commodo.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
                     Integer et purus sit amet leo
                     vestibulum commodo.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center my-8 md:my-0">
                   <p class="font-semibold">Focal Point</p>
                   <p class="mt-2">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit.
@@ -221,7 +223,7 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12 mx-5">
+            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12 md:mx-5">
             <div class="">
               <object type="image/svg+xml" data="../../assets/images/Fornitori.svg" alt="Feature 1">
               </object>
@@ -236,28 +238,10 @@
         <div>
           <div class="my-12 container mx-auto text-center">
             <h1 class="text-3xl font-semibold  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary">Scopri come PRO24 può aiutarti ad avere controllo totale sugli acquisti aziendali   </h1>
-            <!-- <form class="w-full sticky top-0 mb-10 mx-auto pt-12 pb-24" style="max-width: fit-content;" >
-              <div class="md:flex hidden items-center">
-              <div class="md:flex md:items-center">
-                  <input class="shadow-xl form--primary w-96 pl-5 rounded-sm border-none h-16 tracking-wide rounded-tr-none rounded-br-none" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
-              </div>
-                  <button class="shadow-xl btn--primary rounded-sm hover:font-semibold tracking-widest leading-none relative h-16 whitespace-pre rounded-tl-none rounded-bl-none" style="min-width: min-content;" type="button">
-                    Inizia →
-                  </button>
-            </div>
-            <div class="md:hidden items-center">
-              <div class="md:flex md:items-center">
-                  <input class="form--primary opacity-70	 rounded-sm bg-gray-100 border-none h-12 w-full tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
-              </div>
-                  <button class="btn--primary rounded-sm my-2 w-full hover:font-semibold tracking-widest leading-none relative"  type="button">
-                    Scopri
-                  </button>
-            </div>
-            </form>  -->
-            <form class="w-6/12 sticky top-0 mb-10 mx-auto pt-12 pb-24" >
+            <form class="md:w-6/12 sticky top-0 mb-10 md:mx-auto pt-12 md:pb-24 pb-12 mx-4" >
                 <div class="md:flex hidden items-center relative left-16">
                 <div class="w-full md:items-center">
-                    <input class="shadow-xl opacity-70 w-full form--primary bg-white pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
+                    <input class="shadow-xl w-full form--primary bg-white pl-5 rounded-md border-none h-16 tracking-wide"  type="email" placeholder="Inserisci la tua mail aziendale..." >
                 </div>
                     <button class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-32 whitespace-pre" style="min-width: min-content;" type="button">
                       Scopri
@@ -265,7 +249,7 @@
               </div>
               <div class="md:hidden items-center">
                 <div class="md:flex md:items-center">
-                    <input class="form--primary opacity-70	 rounded-md bg-white border-none h-12 w-full tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
+                    <input class="form--primary	 rounded-md bg-white border-none h-12 w-full tracking-wide"  type="email" placeholder="Inserisci la tua mail aziendale..." >
                 </div>
                     <button class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative"  type="button">
                       Scopri
@@ -276,13 +260,13 @@
         </div>
       </div>
     </section>
-    <section class="mb-24">
-      <div class="md:mt-28 mt-12 container relative mx-auto">
-        <div class="md:w-7/12 shadow-xl p-12 rounded-2xl relative z-10 tipiem-bg">
+    <section class="md:mb-24 mb-12">
+      <div class="md:mt-28 mt-12 container px-2 relative md:mx-auto">
+        <div class="md:w-7/12 shadow-xl md:p-12 rounded-2xl relative z-10 tipiem-bg">
           <div class="md:px-0 px-2">
-              <div>
-                <img src="../../assets/images/tipiem-white.svg" alt="tipem log" class="w-6/12 ml-auto -m-10 opacity-50">
-                <h1 class="text-white text-xl font-normal  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 ">Consulenze specifiche per <br> <span class="font-extrabold"> trasformare i tuoi centri di costo</span></h1>
+              <div class="md:p-0 p-4">
+                <img src="../../assets/images/tipiem-white.svg" alt="tipem log" class="w-6/12 ml-auto md:-m-10 opacity-50">
+                <h1 class="text-white text-xl font-normal  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 ">Consulenze specifiche per <br class="md:block hidden"> <span class="font-extrabold"> trasformare i tuoi centri di costo</span></h1>
                 <p class=" text-white mt-6 text-xl">Abbiamo creato Supplean in collaborazione con Theprocuremen, un gruppo di professionisti in grado di creare processi di acquito su misura per ogni cliente trasformando i centri di costo in centri di ricavo. 
                 </p>
                 <button class="btn--primary mt-6 text-md rounded-md tracking-widest leading-none relative my-4"  type="button">
@@ -291,7 +275,7 @@
               </div>
             </div>
         </div>
-        <div class="md:w-8/12 right-0 ml-auto relative -mb-72 -top-72 z-0">
+        <div class="md:w-8/12 mt-12 md:mt-0 right-0 ml-auto relative md:-mb-72 md:-top-72 z-0">
           <div class="border border-blue-100 rounded-2xl">
             <div class="md:flex">
               <div class="md:w-6/12 self-end relative">
