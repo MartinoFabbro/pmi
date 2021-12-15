@@ -246,3 +246,10 @@ transform: rotate(
 .border-bottom-line {
   border-bottom: 1px solid #d5e8ee;
 }
+
+
+.arrow-wrapper:hover{
+  .arrow-object {
+      transform: translate3d(4px, 0, 0) !important;
+    }
+}
