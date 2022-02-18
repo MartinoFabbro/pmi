@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,8 @@ export class SalesforceService {
   }
 
   sendForm(obj: any): Promise<any>{
-    return this.http.post(this.url, obj).toPromise();
+    const headers = new HttpHeaders()
+      .append('Access-Control-Allow-Origin', '*');
+    return this.http.post(this.url, obj, {headers}).toPromise();
   }
 }
