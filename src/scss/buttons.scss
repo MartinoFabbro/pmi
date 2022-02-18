@@ -7,8 +7,8 @@
         color: white;;
         padding:10px 20px;
         overflow: hidden;
-        font-weight: 500;   
-        background-size: 120% auto;    
+        font-weight: 500;
+        background-size: 120% auto;
         transition: .3s;
         &:hover{
            transition: .3s;
@@ -16,6 +16,11 @@
            transform: translate(0,-2px);
            box-shadow: 0 9px 13px -6px rgb(10 21 43 / 45%);
         }
+      &:disabled,
+      &.disabled {
+        opacity: 20%;
+        pointer-events: none;
+      }
     }
     &--secondary {
         background: transparent;
@@ -23,8 +28,8 @@
         border: solid 2px white;;
         padding:10px 20px;
         overflow: hidden;
-        font-weight: 500;   
-        background-size: 120% auto;    
+        font-weight: 500;
+        background-size: 120% auto;
         &:hover{
             .arrow {
             transition: .3s;
@@ -38,8 +43,8 @@
         background: transparent;
         color: white;
         overflow: hidden;
-        font-weight: 500;   
-        background-size: 120% auto;    
+        font-weight: 500;
+        background-size: 120% auto;
         &:hover{
             opacity: .7;
         }

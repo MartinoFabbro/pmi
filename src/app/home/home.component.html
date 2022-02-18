@@ -14,17 +14,17 @@
           <form class="w-full sticky top-0 md:mb-10 mb-48 " id="trigger-product" >
             <div class="md:flex hidden items-center">
             <div class="w-6/12 md:items-center">
-                <input class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
+                <input [formControl]="emailInputControl" class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
             </div>
-                <button class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-32 whitespace-pre" (click)=onboarding() style="min-width: min-content;" type="button">
-                  Scopri
-                </button>
+              <button [disabled]="!emailInputControl.valid" class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-32 whitespace-pre" (click)="onboarding('Demo')" style="min-width: min-content;" type="button">
+                Scopri
+              </button>
           </div>
           <div class="md:hidden items-center">
             <div class="md:flex md:items-center">
-                <input class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email">
+                <input class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name_2" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
             </div>
-                <button class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative"  (click)=onboarding()  type="button">
+                <button class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative"  (click)="onboarding('Demo')"  type="button">
                   Scopri
                 </button>
           </div>
@@ -36,7 +36,7 @@
           </div>
           <div class="pt-2">
             <span class="pt-2 text-primary">
-              Se siamo cresciuti più del 5% nelle quotazioni è anche grazie al software Niuma 
+              Se siamo cresciuti più del 5% nelle quotazioni è anche grazie al software Niuma
             </span>
           <br>
             <div class="mt-2 text-primary font-normal font-poppins">
@@ -83,7 +83,7 @@
           <object class="absolute shadow-xl bg-white rounded-xl bottom-28 -left-12 w-5/12" type="image/svg+xml" data="../../assets/images/RDA.svg" alt="Feature 1">
           </object>
 
-        </div>         
+        </div>
       </div>
       </div>
 
@@ -98,17 +98,17 @@
           </div>
         </div>
         <section>
-      <div class="bg--gradient__yellow md:py-24 py-12"> 
+      <div class="bg--gradient__yellow md:py-24 py-12">
       <div class="container mx-auto">
           <div>
             <div class="md:flex">
             <div class="md:w-6/12 pr-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Albo fornitori digitale</h1>                
+              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Albo fornitori digitale</h1>
               <p class="text-gray-900 leading-7">
                 Gestisci in maniera automatizzata il tuo albo fornitori. Con Procurement24 puoi censire i tuoi fornitori in un clic: scegli se importare gli elenchi preesistenti dei tuoi fornitori, registrarli manualmente o invitare il fornitore a compilare la sua scheda sulla tua piattaforma.              </p>
               <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
                 Scopri <span class="arrow absolute pl-1">→</span>
-              </button> 
+              </button>
               <div class="">
                 <div class="py-8 md:my-0">
                   <p class="flex font-medium">
@@ -141,12 +141,12 @@
           <div>
             <div class="md:flex">
             <div class="md:w-6/12 pr-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Automazione degli ordini</h1>                
+              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Automazione degli ordini</h1>
               <p class="text-gray-900 leading-7">
                 Digitalizza interamente il processo di ordine e di acquisto. Perfeziona in modo interattivo gli ordini e accedi al monitoraggio delle capienze residue e delle scadenze; riduci errori e discrepanze nelle entrate merci. Con Procurement24 puoi dimenticare blocchi e intoppi nei processi di ordine e di acquisto e ti assicurerai completa trasparenza e tracciabilità delle fasi di negoziazione e perfezionamento degli acquisti.              </p>
               <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
                 Scopri <span class="arrow absolute pl-1">→</span>
-              </button> 
+              </button>
               <div class="">
                 <div class="py-8 md:my-0">
                   <p class="flex font-medium">
@@ -176,17 +176,17 @@
         <div>
         </div>
         </div>
-        <div class="bg--gradient__yellow md:py-24 py-12"> 
+        <div class="bg--gradient__yellow md:py-24 py-12">
           <div class="container mx-auto">
             <div>
               <div class="md:flex">
               <div class="md:w-6/12 pr-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Processi approvativi personalizzati </h1>                
+              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Processi approvativi personalizzati </h1>
               <p class="text-gray-900 leading-7">
                 Gestisci in base alle tue esigenze il flusso approvativo degli ordini. Conclusa la configurazione della RDO, questa può essere sottoposta alla valutazione di uno o più utenti predisposti, a partire dal centro di costo da cui dipende, fino ad arrivare a un super approvatore. Una volta approvata, la richiesta di ordine può essere pubblicata e saranno coinvolti i fornitori.              </p>
               <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
                 Scopri <span class="arrow absolute pl-1">→</span>
-              </button> 
+              </button>
               <div class="">
                 <div class="py-8 md:my-0">
                   <p class="flex font-medium">
@@ -215,17 +215,17 @@
           </div>
         </div>
         </div>
-        <div class="md:py-24 py-12"> 
+        <div class="md:py-24 py-12">
           <div class="container mx-auto">
             <div>
               <div class="md:flex">
               <div class="md:w-6/12 pr-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Analitiche</h1>                
+              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Analitiche</h1>
               <p class="text-gray-900 leading-7">
                 Accedi alla tua dashboard per avere una panoramica generale della situazione gestita dalla piattaforma. Tramite le analitiche puoi consultare i dati che riguardano l’albo fornitori, le RDA, le RDO, gli ordini, gli utenti che hanno accesso alla piattaforma e i Centri di costo. Scarica le statistiche che riguardano un determinato arco temporale, valuta i fornitori, gli acquisti, i buyer e costruisci una Spend Analysis accurata.              </p>
                 <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
                 Scopri <span class="arrow absolute pl-1">→</span>
-              </button> 
+              </button>
               <div class="">
                 <div class="py-8 md:my-0">
                   <p class="flex font-medium">
@@ -277,7 +277,7 @@
                     </button>
               </div>
             </form>
-          </div>        
+          </div>
         </div>
       </div>
     </section>
@@ -288,11 +288,11 @@
               <div class="md:p-0 p-4">
                 <img src="../../assets/images/tipiem-white.svg" alt="tipem log" class="w-6/12 ml-auto -m-10 opacity-50">
                 <h1 class="text-white text-lg font-normal  md:text-lg lg:text-xl xl:text-2xl md:leading-tight my-5 "><br class="md:block hidden"> <span class="font-extrabold"> Scopri The Procuremen, il nostro servizio di consulenza per trasformare i centri di costo in centri di ricavo</span></h1>
-                <p class=" text-white mt-6 text-xl">The Procuremen è una squadra di professionisti, formata da Senior Category Specialists, in grado di accompagnare i responsabili dei centri di costo nel processo evolutivo richiesto dal mercato. Scopri come trasformare i singoli centri di costo in centri di ricavo. 
+                <p class=" text-white mt-6 text-xl">The Procuremen è una squadra di professionisti, formata da Senior Category Specialists, in grado di accompagnare i responsabili dei centri di costo nel processo evolutivo richiesto dal mercato. Scopri come trasformare i singoli centri di costo in centri di ricavo.
                 </p>
                 <button class="btn--primary mt-6 text-md rounded-md tracking-widest leading-none relative my-4"  type="button">
                   Scopri i servizi di Theprocuremen
-                </button>  
+                </button>
               </div>
             </div>
         </div>
@@ -300,32 +300,32 @@
           <div class="border border-blue-100 rounded-2xl">
             <div class="md:flex">
               <div class="md:w-6/12 self-end relative">
-                <div class="relative"> 
+                <div class="relative">
               </div>
               </div>
               <div class="md:w-6/12 relative">
-                <div class="text-xl text-primary my-8 uppercase flex"> 
+                <div class="text-xl text-primary my-8 uppercase flex">
                   <svg width="24" height="24" class="mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.75 11.7256L4.75 11.7256" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M13.7002 5.70124L19.7502 11.7252L13.7002 17.7502" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     Flotta auto aziendale
                 </div>
-                <div class="text-xl text-primary my-8 uppercase flex"> 
+                <div class="text-xl text-primary my-8 uppercase flex">
                   <svg width="24" height="24" class="mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.75 11.7256L4.75 11.7256" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M13.7002 5.70124L19.7502 11.7252L13.7002 17.7502" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                  Mobilità elettrica 
+                  Mobilità elettrica
                 </div>
-                <div class="text-xl text-primary my-8 uppercase flex"> 
+                <div class="text-xl text-primary my-8 uppercase flex">
                   <svg width="24" height="24" class="mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.75 11.7256L4.75 11.7256" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M13.7002 5.70124L19.7502 11.7252L13.7002 17.7502" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> 
+                    </svg>
                   TLC & ICT
                 </div>
-                <div class="text-xl text-primary my-8 uppercase flex"> 
+                <div class="text-xl text-primary my-8 uppercase flex">
                   <svg width="24" height="24" class="mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.75 11.7256L4.75 11.7256" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M13.7002 5.70124L19.7502 11.7252L13.7002 17.7502" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
