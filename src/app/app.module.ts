@@ -54,6 +54,9 @@ import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 import { OnboardingComponent } from './onboarding/onboarding.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {SalesforceService} from './services/salesforce.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -66,6 +69,7 @@ import { OnboardingComponent } from './onboarding/onboarding.component';
     OnboardingComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     NgsRevealModule,
@@ -114,8 +118,9 @@ import { OnboardingComponent } from './onboarding/onboarding.component';
     PortalModule,
     ScrollingModule,
     BrowserAnimationsModule,
-    MdePopoverModule
-  ],
+    MdePopoverModule,
+    FormsModule,
+    ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
