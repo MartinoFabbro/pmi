@@ -52,7 +52,7 @@ export class OnboardingComponent implements OnInit, AfterViewInit {
       industry: new FormControl('', [Validators.required]),
       employeesNumber: new FormControl('', [Validators.required]),
       currentManagement: new FormControl('', [Validators.required]),
-      oid: new FormControl('00D3O0000008oml', [Validators.required]),
+      oid: new FormControl('00D09000002Xecz', [Validators.required]),
       retUrl: new FormControl('https://nifty-wright-9e89ec.netlify.app/onboarding?type=Demo$success=true', [Validators.required])
     });
   }
