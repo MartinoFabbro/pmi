@@ -64,8 +64,8 @@ export class OnboardingComponent implements OnInit, AfterViewInit {
   }
 
   onSubmit() {
-    console.log(document.forms['prova'])
-    document.forms['prova'].submit().then(resp => {
+    console.log(document.forms['salesforceForm'])
+    document.forms['salesforceForm'].submit().then(resp => {
         console.log('SIIIIII');
       }, error => {
         console.log('NOOOOO');
