@@ -1,42 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Params} from '@angular/router';
-import {SalesforceService} from '../services/salesforce.service';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {MatDialog} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-onboarding',
   templateUrl: './onboarding.component.html',
   styleUrls: ['./onboarding.component.scss']
 })
-export class OnboardingComponent implements OnInit {
+export class OnboardingComponent implements OnInit, AfterViewInit {
 
   formGroup: FormGroup;
   type: string;
   email: string;
+  success: boolean;
+
+  @ViewChild('successModal') successModal: TemplateRef<any>;
 
   constructor(private formBuilder: FormBuilder,
               private activatedRoute: ActivatedRoute,
-              private salesForceService: SalesforceService) { }
+              private router: Router,
+              public dialog: MatDialog) { }
 
-  private obj = {
-    first_name: '',
-    last_name: '',
-    company: '',
-    phone: '',
-    email: '',
-    lead_source: '',
-    industry: '',
-    '00N3O000005k0Om': '', // employeesNumber
-    '00N3O000004YY3E': '', // currentManagement
-    oid: '',
-    retURL: ''
-  };
+  ngOnInit() {
 
-  async ngOnInit() {
-
-    await this.activatedRoute.queryParams.subscribe(
+    this.activatedRoute.queryParams.subscribe(
       (params: Params) => {
         this.email = params['email'];
+        this.success = params['success'];
 
         if (params['type'] === 'Demo') {
           this.type = 'Webform Demo PMI';
@@ -50,8 +42,6 @@ export class OnboardingComponent implements OnInit {
       }
     );
 
-
-
     this.formGroup = this.formBuilder.group({
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
@@ -63,33 +53,30 @@ export class OnboardingComponent implements OnInit {
       employeesNumber: new FormControl('', [Validators.required]),
       currentManagement: new FormControl('', [Validators.required]),
       oid: new FormControl('00D3O0000008oml', [Validators.required]),
-      retUrl: new FormControl('http://', [Validators.required])
+      retUrl: new FormControl('https://nifty-wright-9e89ec.netlify.app/onboarding?type=Demo$success=true', [Validators.required])
     });
+  }
+
+  ngAfterViewInit(): void {
+    if (this.success) {
+      this.dialog.open(this.successModal);
+    }
   }
 
   onSubmit() {
+    console.log(document.forms['prova'])
+    document.forms['prova'].submit().then(resp => {
+        console.log('SIIIIII');
+      }, error => {
+        console.log('NOOOOO');
+      });
 
-    this.obj.first_name = this.formGroup.get('firstName').value;
-    this.obj.last_name = this.formGroup.get('lastName').value;
-    this.obj.company = this.formGroup.get('company').value;
-    this.obj.phone = this.formGroup.get('phone').value;
-    this.obj.email = this.formGroup.get('email').value;
-    this.obj.lead_source = this.formGroup.get('leadSource').value;
-    this.obj.industry = this.formGroup.get('industry').value;
-    this.obj['00N3O000005k0Om'] = this.formGroup.get('employeesNumber').value;
-    this.obj['00N3O000004YY3E'] = this.formGroup.get('currentManagement').value;
-    this.obj.oid = this.formGroup.get('oid').value;
-    this.obj.retURL = this.formGroup.get('retUrl').value;
-
-
-    this.salesForceService.sendForm(this.obj).then(resp => {
-      console.log('SIIIIII');
-    }, error => {
-      console.log('NOOOOO');
-    });
   }
 
-
+  close() {
+    this.dialog.closeAll();
+    this.router.navigate(['/home']);
+  }
 
 
 }

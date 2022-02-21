@@ -55,7 +55,6 @@ import { PricingComponent } from './pricing/pricing.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 import { OnboardingComponent } from './onboarding/onboarding.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SalesforceService} from './services/salesforce.service';
 import {HttpClientModule} from '@angular/common/http';
 
 

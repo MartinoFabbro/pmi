@@ -13,15 +13,15 @@
         </p>
         <div class="text-center bg--primary__lightblue">
 
-
-          <form class="onboarding-form mx-auto pt-12 pb-24" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" [formGroup]="formGroup">
+          <form class="onboarding-form mx-auto pt-12 pb-24" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="prova"
+                [formGroup]="formGroup">
 
             <h1 class="text-primary text-left text-xl font-semibold  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 ">Completa il form, ti contatteremo in 24 ore!</h1>
             <h5 *ngIf="type === 'Webform Demo PMI'"> Demo Generica </h5>
             <h5 *ngIf="type === 'Webform Piano Light'"> Piano Light </h5>
             <h5 *ngIf="type === 'Webform Piano Full'"> Piano Full </h5>
             <input formControlName="oid" type=hidden name="oid" value="00D3O0000008oml">
-            <input formControlName="retURL" type=hidden name="retURL" value="http://">
+            <input formControlName="retURL" type=hidden name="retURL" value="https://nifty-wright-9e89ec.netlify.app/onboarding?type=Demo$success=true">
 
             <div class="w-full my-3 md:items-center">
               <input class="w-full form--primary bg-white rounded-md border-none h-16 tracking-wide" placeholder="Nome"
@@ -98,17 +98,32 @@
               </select><br>
             </div>
 
+            <button
+              (click)="onSubmit()" [disabled]="!formGroup.valid"
 
-            <button (click)="onSubmit()" [disabled]="!formGroup.valid"
-
-            class="btn--primary rounded-md my-2 w-6/12 mt-6 hover:font-semibold tracking-widest leading-none relative"  type="submit" name="submit">
+            class="btn--primary rounded-md my-2 w-6/12 mt-6 hover:font-semibold tracking-widest leading-none relative"  type="submit" name="s">
               Invia
             </button>
 
-
           </form>
+
+
+
+
 
         </div>
     </div>
 </div>
 </section>
+
+<ng-template #successModal let-modal>
+  <mat-dialog-content>
+    <div class="modal-header">
+      <p (click)="close()">X</p>
+    </div>
+    <div class="modal-body">
+      <p>SUCCESS</p>
+    </div>
+  </mat-dialog-content>
+
+</ng-template>
