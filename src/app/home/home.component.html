@@ -16,8 +16,8 @@
             <div class="w-6/12 md:items-center">
                 <input [formControl]="emailInputControl" class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
             </div>
-              <button [disabled]="!emailInputControl.valid" class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-32 whitespace-pre" (click)="onboarding('Demo')" style="min-width: min-content;" type="button">
-                Scopri
+              <button [disabled]="!emailInputControl.valid" class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-40 whitespace-pre" (click)="onboarding('Demo')" style="min-width: min-content;" type="button">
+                Inizia Ora
               </button>
           </div>
           <div class="md:hidden items-center">
@@ -25,28 +25,24 @@
                 <input class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name_2" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
             </div>
                 <button class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative"  (click)="onboarding('Demo')"  type="button">
-                  Scopri
+                  Inizia Ora
                 </button>
           </div>
           </form>
         </div>
-        <div class="bg-gray-100 rounded-lg md:p-6 p-2 md:absolute relative md:-right-10 md:bottom-16 md:w-5/12 font-semibold flex shadow-xl">
-          <div>
-            <img src="../../assets/images/quote.svg" alt="virgolette" class="md:w-24 w-40 px-3">
+        <div class="bg-gray-100 rounded-lg md:p-6 p-2 md:absolute relative md:right-20 md:bottom-16 md:w-5/12 font-semibold flex shadow-xl">
+          <div class="self-center">
+            <img src="../../assets/images/quote.svg" alt="virgolette" class="md:w-16 w-40">
           </div>
-          <div class="pt-2">
-            <span class="pt-2 text-primary">
+            <p class="px-5 text-primary font-normal">
               Se siamo cresciuti più del 5% nelle quotazioni è anche grazie al software Niuma
-            </span>
-          <br>
-            <div class="mt-2 text-primary font-normal font-poppins">
-            Stefano Mazzola <br>
-            Gefran
-          </div>
-          <div class="absolute right-5 bottom-2 font-normal text-primary arrow-wrapper">
-            <a href="#">Leggi il Caso <span class="ml-1 arrow-object">→</span> </a>
-          </div>
-          </div>
+            </p>
+        </div>
+        <div class="bg-gray-100 rounded-lg md:p-5 p-2 md:absolute relative md:right-28 md:-bottom-8 md:w-2/12 font-semibold flex shadow-xl">
+        <div class="text-primary font-poppins">
+          Stefano Mazzola <br>
+          <span class="font-normal">CPO Gefran</span> 
+        </div>
         </div>
         </div>
       </div>
@@ -72,7 +68,7 @@
     </section>
     <section class="bg--primary__gray overflow-hidden md:pt-24 pt-12 relative">
       <div class="mx-auto text-center -mb-12">
-        <h1 class="text-3xl font-semibold text-primary mb-20  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight">Tu sviluppi il tuo business <br> <span class="text-gradient font-extrabold">Procurement24Ore </span>fa il resto </h1>
+        <h1 class="text-3xl font-semibold text-primary mb-20  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight">Tu sviluppi il tuo business <br> <span class="text-gradient font-extrabold">Procurement24ore </span>fa il resto </h1>
       </div>
       <div class="container mx-auto">
       <div class="flex relative">
@@ -97,7 +93,6 @@
           <!-- <p class="md:w-2/4 mt-6 text-xl text-primary">La missione di Supplean è di dotare le aziende italiane di tutti gli strumenti necessari a semplificare i processi di procurement e supplier management.</p> -->
           </div>
         </div>
-        <section>
       <div class="bg--gradient__yellow md:py-24 py-12">
       <div class="container mx-auto">
           <div>
@@ -105,9 +100,9 @@
             <div class="md:w-6/12 pr-5">
               <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Albo fornitori digitale</h1>
               <p class="text-gray-900 leading-7">
-                Gestisci in maniera automatizzata il tuo albo fornitori. Con Procurement24 puoi censire i tuoi fornitori in un clic: scegli se importare gli elenchi preesistenti dei tuoi fornitori, registrarli manualmente o invitare il fornitore a compilare la sua scheda sulla tua piattaforma.              </p>
+                Gestisci in maniera automatizzata il tuo albo fornitori. Con Procurement24ore puoi censire i tuoi fornitori in un clic: scegli se importare gli elenchi preesistenti dei tuoi fornitori, registrarli manualmente o invitare il fornitore a compilare la sua scheda anche senza necessità di registrarsi alla piattaforma.              </p>
               <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                Scopri <span class="arrow absolute pl-1">→</span>
+                Scopri l'albo fornitori <span class="arrow absolute pl-1">→</span>
               </button>
               <div class="">
                 <div class="py-8 md:my-0">
@@ -127,9 +122,9 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12">
+            <div class="md:w-8/12 pl-5">
             <div class="">
-              <object type="image/svg+xml" data="../../assets/images/1-animazione-fornitori.svg" alt="Feature 1">
+              <object type="image/svg+xml" data="../../assets/images/1-animazione-fornitori.svg" class="rounded-2xl" alt="Feature 1">
               </object>
             </div>
           </div>
@@ -143,9 +138,9 @@
             <div class="md:w-6/12 pr-5">
               <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary font-bold">Automazione degli ordini</h1>
               <p class="text-gray-900 leading-7">
-                Digitalizza interamente il processo di ordine e di acquisto. Perfeziona in modo interattivo gli ordini e accedi al monitoraggio delle capienze residue e delle scadenze; riduci errori e discrepanze nelle entrate merci. Con Procurement24 puoi dimenticare blocchi e intoppi nei processi di ordine e di acquisto e ti assicurerai completa trasparenza e tracciabilità delle fasi di negoziazione e perfezionamento degli acquisti.              </p>
+                Digitalizza interamente il processo di ordine e di acquisto. Perfeziona in modo interattivo gli ordini e accedi al monitoraggio delle capienze residue e delle scadenze; riduci errori e discrepanze nelle entrate merci. Con Procurement24ore puoi dimenticare blocchi e intoppi nei processi di ordine e di acquisto e ti assicurerai completa trasparenza e tracciabilità delle fasi di negoziazione e perfezionamento degli acquisti.              </p>
               <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                Scopri <span class="arrow absolute pl-1">→</span>
+                Scopri come digitalizziamo gli acquisti <span class="arrow absolute pl-1">→</span>
               </button>
               <div class="">
                 <div class="py-8 md:my-0">
@@ -165,14 +160,10 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12">
-            <div class="">
-<!--              <object type="image/svg+xml" data="../../assets/images/Fornitori.svg" alt="Feature 1">-->
-<!--              </object>-->
-              <video autoplay onloadedmetadata="this.muted = true" oncanplay="this.play()" loop="true">
-                <source src="../../assets/images/2-animazione-ordini.mp4" type='video/mp4'/>
+            <div class="md:w-8/12 pl-5">
+              <video autoplay onloadedmetadata="this.muted = true" oncanplay="this.play()" class="rounded-2xl" loop="true">
+                <source src="../../assets/images/2-animazione-ordini.mp4"  type='video/mp4'/>
               </video>
-            </div>
           </div>
           </div>
           </div>
@@ -188,7 +179,7 @@
               <p class="text-gray-900 leading-7">
                 Gestisci in base alle tue esigenze il flusso approvativo degli ordini. Conclusa la configurazione della RDO, questa può essere sottoposta alla valutazione di uno o più utenti predisposti, a partire dal centro di costo da cui dipende, fino ad arrivare a un super approvatore. Una volta approvata, la richiesta di ordine può essere pubblicata e saranno coinvolti i fornitori.              </p>
               <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                Scopri <span class="arrow absolute pl-1">→</span>
+                Scopri le approvazioni personalizzate <span class="arrow absolute pl-1">→</span>
               </button>
               <div class="">
                 <div class="py-8 md:my-0">
@@ -208,9 +199,9 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12">
+            <div class="md:w-8/12 pl-5">
             <div class="">
-              <object type="image/svg+xml" data="../../assets/images/3-animazione-approvazione.svg" alt="Feature 1">
+              <object type="image/svg+xml" data="../../assets/images/3-animazione-approvazione.svg" class="rounded-2xl" alt="Feature 1">
               </object>
             </div>
           </div>
@@ -227,7 +218,7 @@
               <p class="text-gray-900 leading-7">
                 Accedi alla tua dashboard per avere una panoramica generale della situazione gestita dalla piattaforma. Tramite le analitiche puoi consultare i dati che riguardano l’albo fornitori, le RDA, le RDO, gli ordini, gli utenti che hanno accesso alla piattaforma e i Centri di costo. Scarica le statistiche che riguardano un determinato arco temporale, valuta i fornitori, gli acquisti, i buyer e costruisci una Spend Analysis accurata.              </p>
                 <button class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                Scopri <span class="arrow absolute pl-1">→</span>
+                Scopri le statistiche <span class="arrow absolute pl-1">→</span>
               </button>
               <div class="">
                 <div class="py-8 md:my-0">
@@ -247,24 +238,24 @@
                 </div>
               </div>
             </div>
-            <div class="rounded-2xl shadow-xl bg-white overflow-hidden md:w-6/12">
-            <div class="">
-<!--              <object type="image/svg+xml" data="../../assets/images/Fornitori.svg" alt="Feature 1">-->
-<!--              </object>-->
-              <video autoplay onloadedmetadata="this.muted = true" oncanplay="this.play()" loop="true">
+            <div class="md:w-8/12 pl-5">
+              <video autoplay onloadedmetadata="this.muted = true" class="rounded-2xl" oncanplay="this.play()" loop="true">
                 <source src="../../assets/images/4-animazione-analytics.mp4" type='video/mp4'/>
               </video>
-            </div>
           </div>
           </div>
           </div>
         </div>
         </div>
-      </section>
+        </div>
+        <div class="pb-12">
+          <div class="mx-auto text-center -mb-12">
+            <h1 class="text-3xl font-semibold text-primary mb-20  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight">Perchè Procurement24ore</h1>
+          </div>
         </div>
         <div class="pb-12">
           <div class="my-12 bg-white rounded-2xl tipiem-bg p-12 container mx-auto text-center">
-            <h1 class="text-3xl font-semibold  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-white">Scopri come PRO24 può aiutarti ad avere controllo totale sugli acquisti aziendali   </h1>
+            <h1 class="text-3xl font-semibold  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-white">Scopri come possiamo aiutarti ad avere controllo totale sugli acquisti aziendali   </h1>
             <form class="md:w-6/12 sticky top-0 mb-10 md:mx-auto py-12 mx-4" >
                 <div class="md:flex hidden items-center relative left-16">
                 <div class="w-full md:items-center">
