@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { OnboardingComponent } from './onboarding/onboarding.component';
+import { SuppliersComponent } from './suppliers/suppliers.component';
+
 
 
 
@@ -14,6 +16,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'pricing', component: PricingComponent},
   { path: 'onboarding', component: OnboardingComponent},
+  { path: 'suppliers', component: SuppliersComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   redirectTo: '/home' }
 ];

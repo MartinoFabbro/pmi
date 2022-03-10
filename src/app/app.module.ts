@@ -56,6 +56,7 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
 import { OnboardingComponent } from './onboarding/onboarding.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { SuppliersComponent } from './suppliers/suppliers.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import {HttpClientModule} from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     PricingComponent,
-    OnboardingComponent
+    OnboardingComponent,
+    SuppliersComponent
   ],
   imports: [
     HttpClientModule,
