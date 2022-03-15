@@ -278,3 +278,20 @@ h1 {
 .scale {
     transform: scale(1.5);
 }
+
+// tooltip map
+
+.cdk-overlay-pane {  
+    &.mat-tooltip-panel {  
+     .mat-tooltip { 
+     background-color: white;
+     border:  2px solid $base-yellow;
+     border-radius:  4px;
+     color: $base-font;
+     font-size:  16px;
+     padding:  10px; 
+     position: relative !important;
+     width: 300px !important;
+     } 
+    } 
+   }

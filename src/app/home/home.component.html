@@ -1,7 +1,7 @@
     <section class="bg--primary__gray__gradient border-bottom-line px-2 md:px-0">
     <div class="container-2xl mx-auto md:pb-20 px-5">
 
-      <div class="hero w-full rounded-2xl relative">
+      <div class="hero w-full rounded-2xl relative mt-12 md:mt-0">
         <div class="md:px-16 px-4 md:py-24 py-6 rounded-md mx-3 md:mx-0">
           <h1 class="text-4xl font-semibold  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight text-white">Digitalizza </h1>
           <h1 class="text-4xl font-extrabold  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight mt-3 stroke-white h-20 z-10 relative hidden md:block" style="width: fit-content;" id="spin"></h1>
@@ -10,21 +10,42 @@
           <p class="md:mb-10 mb-4 lg:mt-6 md:w-3/6 sm:w-100 text-xl text-white mt-12 md:mt-0">
             Trasformiamo il tuo modo di lavorare semplificando e <span>strutturando</span> gli acquisti aziendali e la gestione dei fornitori.
           </p>
+
           <div id="form-sub">
           <form class="w-full sticky top-0 md:mb-10 mb-48 " id="trigger-product" >
             <div class="md:flex hidden items-center">
             <div class="w-6/12 md:items-center">
                 <input [formControl]="emailInputControl" class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
             </div>
-              <button [disabled]="!emailInputControl.valid" class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-40 whitespace-pre" (click)="onboarding('Demo')" style="min-width: min-content;" type="button">
+              <button 
+              #tooltip="matTooltip"
+              matTooltip="Inserisci la tua mail aziendale per continuare" 
+              [matTooltipDisabled]="emailInputControl.valid"
+              (mouseenter)="$event.stopImmediatePropagation()" 
+              (mouseleave)="tooltip.hide()"          
+              (click)="copy(); onboarding('Demo')"
+              matTooltipPosition="above"
+              class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-40 whitespace-pre" 
+              style="min-width: min-content;">
                 Inizia Ora
               </button>
           </div>
           <div class="md:hidden items-center">
             <div class="md:flex md:items-center">
-                <input class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name_2" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
+                <input [formControl]="emailInputControl" class="shadow-xl opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name_2" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
             </div>
-                <button class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative"  (click)="onboarding('Demo')"  type="button">
+                <button 
+                matTooltip="Inserisci la tua mail aziendale per continuare" 
+                [matTooltipDisabled]="emailInputControl.valid"
+                #tooltip="matTooltip"
+                matTooltip="Inserisci la tua mail aziendale per continuare" 
+                [matTooltipDisabled]="emailInputControl.valid"
+                (mouseenter)="$event.stopImmediatePropagation()" 
+                (mouseleave)="tooltip.hide()"          
+                (click)="copy(); onboarding('Demo')"
+                matTooltipPosition="above"
+                class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative" 
+                style="min-width: min-content;">
                   Inizia Ora
                 </button>
           </div>
@@ -38,7 +59,7 @@
               Se siamo cresciuti più del 5% nelle quotazioni è anche grazie al software Niuma
             </p>
         </div>
-        <div class="bg-gray-100 rounded-lg md:p-5 p-2 md:absolute relative md:right-28 md:-bottom-8 md:w-2/12 font-semibold flex shadow-xl">
+        <div class="bg-gray-100 rounded-lg md:p-5 p-2 md:absolute relative md:right-28 md:-bottom-8 md:w-2/12 font-semibold flex shadow-xl mt-6 md:mt-0">
         <div class="text-primary font-poppins">
           Stefano Mazzola <br>
           <span class="font-normal">CPO Gefran</span> 
@@ -381,9 +402,18 @@
                 <div class="w-full md:items-center">
                     <input class="shadow-xl w-full form--primary bg-white pl-5 rounded-md border-none h-16 tracking-wide"  type="email" placeholder="Inserisci la tua mail aziendale..." >
                 </div>
-                    <button class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-32 whitespace-pre" style="min-width: min-content;" type="button">
-                      Scopri
-                    </button>
+
+                <button 
+                #tooltip="matTooltip"
+                matTooltip="Inserisci la tua mail aziendale per continuare" 
+                [matTooltipDisabled]="emailInputControl.valid"
+                (mouseenter)="$event.stopImmediatePropagation()" 
+                (mouseleave)="tooltip.hide()"          
+                (click)="copy(); onboarding('Demo')"
+                class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-32 whitespace-pre"
+                style="min-width: min-content;">
+                Scopri
+              </button>
               </div>
               <div class="md:hidden items-center">
                 <div class="md:flex md:items-center">

@@ -17,6 +17,6 @@ module.exports = {
     variants: {
       extend: {},
     },
-    plugins: [require('@tailwindcss/forms'),require('@tailwindcss/typography'), require('daisyui'),require ('tw-elements/dist/plugin'),
+    plugins: [require('@tailwindcss/forms'),require('@tailwindcss/typography'), require('daisyui'),require ('tw-elements/dist/plugin'), require('flowbite/plugin'),
   ],
 };

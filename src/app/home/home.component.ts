@@ -1,18 +1,33 @@
-import { AfterContentInit, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentInit, ViewChild, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 import { GsapService } from '../services/gsap.service';
 import { ScrollToPlugin } from 'gsap/all';
 import { ScrollTrigger } from 'gsap/all';
 import { NgsRevealModule } from 'ngx-scrollreveal';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
+import {MatTooltip, TooltipPosition} from '@angular/material/tooltip';
 
+
+/** Custom options the configure the tooltip's default show/hide delays. */
+export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
+  showDelay: 200,
+  hideDelay: 200,
+  touchendHideDelay: 200,
+};
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [{provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults}],
 })
+
 export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('tooltip') tooltip: MatTooltip;
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+
+
 
   emailInputControl: FormControl;
 
@@ -45,7 +60,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   onboarding(type: string){
-		this.router.navigate(['/onboarding'], { queryParams: {type, email: this.emailInputControl.value}}); // navigate to other page
+    if (this.emailInputControl.valid) {
+		  this.router.navigate(['/onboarding'], { queryParams: {type, email: this.emailInputControl.value}}); // navigate to other page
+    }
 	}
 
   public fadeIn1() {
@@ -94,6 +111,10 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   public moveTo() {
     const anim = this._gsapService;
     anim.moveto();
+  }
+
+  public copy = ()=> {
+    this.tooltip.show()
   }
 
   public ilProdotto() {
