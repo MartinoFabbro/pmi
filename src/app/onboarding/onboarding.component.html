@@ -1,33 +1,22 @@
-<section>
-<div class="flex 2xl:h-screen h-full">
-
-    <div class="md:w-full h-full bg--primary__lightblue">
-        <p class="cursor-pointer text-primary p-3 items-end flex" routerLink="home">
-                <svg width="18" height="18" class="mr-2 self-center" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.25 12.2744L19.25 12.2744" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Torna indietro
-        </p>
-        <div class="text-center bg--primary__lightblue">
-
-          <form class="onboarding-form mx-auto pt-12 pb-24" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="salesforceForm"
+<section class="container-2xl mx-auto">
+<div class="md:flex h-screen">
+  <div class="md:w-6/12">
+    <div class="md:w-full bg--primary__lightblue rounded-2xl m-5 md:m-0 px-5 md:px-0">
+        <div class="bg--primary__lightblue rounded-2xl py-5">
+          <form class="onboarding-form mx-auto" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="salesforceForm"
                 [formGroup]="formGroup">
 
-            <h1 class="text-primary text-left text-xl font-semibold  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 ">Completa il form, ti contatteremo in 24 ore!</h1>
-            <h5 *ngIf="type === 'Webform Demo PMI'"> Demo Generica </h5>
+            <h1 class="text-primary text-left text-xl font-semibold  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 ">Completa il form <br> ti contatteremo in 24 ore!</h1>
+            <!-- <h5 *ngIf="type === 'Webform Demo PMI'"> Demo Generica </h5>
             <h5 *ngIf="type === 'Webform Piano Light'"> Piano Light </h5>
-            <h5 *ngIf="type === 'Webform Piano Full'"> Piano Full </h5>
+            <h5 *ngIf="type === 'Webform Piano Full'"> Piano Full </h5> -->
             <input formControlName="oid" type=hidden name="oid" value="00D09000002Xecz">
             <input formControlName="retURL" type=hidden name="retURL" value="https://nifty-wright-9e89ec.netlify.app/onboarding?type=Demo&success=true">
 
-            <div class="w-full my-3 md:items-center">
-              <input class="w-full form--primary bg-white rounded-md border-none h-16 tracking-wide" placeholder="Nome"
+            <div class="w-full my-3 md:items-center flex">
+              <input class="w-full form--primary bg-white rounded-md border-none h-16 tracking-wide mr-2" placeholder="Nome"
                 formControlName="firstName" id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-            </div>
-
-            <div class="w-full my-3 md:items-center">
-              <input class="w-full form--primary bg-white rounded-md border-none h-16 tracking-wide" placeholder="Cognome"
+              <input class="w-full form--primary bg-white rounded-md border-none h-16 tracking-wide ml-2" placeholder="Cognome"
                 formControlName="lastName" id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
             </div>
 
@@ -92,6 +81,7 @@
                 <option value="Microsoft Dynamics">Microsoft Dynamics</option>
                 <option value="TeamSystem Enterprise">TeamSystem Enterprise</option>
                 <option value="ERP Zucchetti">ERP Zucchetti</option>
+                <option value="None">Non ho un ERP</option>
                 <option value="Altro">Altro</option>
               </select><br>
             </div>
@@ -106,19 +96,112 @@
           </form>
         </div>
     </div>
-    <div class="md:w-3/12">
-
+  </div>
+  <div class="md:w-6/12">
+    <div class="md:w-full bg--primary__lightblue rounded-2xl mx-5 p-5">
+      <h1 class="md:px-3 text-xl font-semibold  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary p-5">Perchè scegliere <br> <span class="text-gradient font-extrabold">Procurement24Ore</span></h1>
+      <div class="">
+        <div class="py-8 md:my-0">
+          <p class="flex font-medium">
+            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Reinventa il modo di gestire gli acquisti</p>
+        </div>
+        <div class="py-8 md:my-0">
+          <p class="flex font-medium">
+            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Interagisci con i tuoi fornitori in modo semplice e innovativo</p>
+        </div>
+        <div class="py-8 md:my-0">
+          <p class="flex font-medium">
+            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Ottieni visibilità totale su spending e saving</p>
+        </div>
+        <div class="py-8 md:my-0">
+          <p class="flex font-medium">
+            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Crea flussi approvativi personalizzati su più livelli </p>
+        </div>
+        </div>
     </div>
+    <div class="md:w-full bg--primary__lightblue rounded-2xl mx-5 p-5 mt-5">
+      <span class="font-semibold">Giuseppe Mori</span>, VP Cesi
+      <p class="mt-3">La semplicità e la facilità di introduzione della piattaforma - bastano tre-quattro giorni per acquisirne la completa padronanza - hanno favorito notevolmente “l’ingaggio” di tutte le persone sia degli acquisti, sia di altre Unità. Il risultato per me più gratificante è vedere come i colleghi coinvolti nel processo d’acquisto in Azienda utilizzino quotidianamente questo strumento senza far ricorso a succedanei di sorta.</p>
+    </div>
+    <div class="md:w-full bg--primary__lightblue rounded-2xl mx-5 p-5 mt-5">
+      <span class="font-semibold">Giorgio Zagami</span>, VP Explora Journeys
+      <p class="mt-3">
+        Oltre al risparmio, c’è un’altra faccia dell’efficienza: la digitalizzazione di un’attività così complessa ci ha permesso di far partecipare più fornitori, di eliminare i colli di bottiglia. Il mercato delle crociere, come altri, oggi deve vivere di innovazione. Crediamo che il ruolo del Procurement strategico sia quello di costruire un’interfaccia tra la propria azienda e il resto del mondo esterno, il più ampia possibile, per essere più permeabili.
+      </p>
+    </div>
+
+
+
+
+  </div>
 </div>
 </section>
 
 <ng-template #successModal let-modal>
   <mat-dialog-content>
     <div class="modal-header">
-      <p (click)="close()">X</p>
+      <div class="bg--primary__lightblue rounded-xl text-center p-5">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 506.4 506.4" style="enable-background:new 0 0 506.4 506.4;" xml:space="preserve">
+        <circle style="fill:#54B265;" cx="253.2" cy="253.2" r="249.2"/>
+        <path style="fill:#F4EFEF;" d="M372.8,200.4l-11.2-11.2c-4.4-4.4-12-4.4-16.4,0L232,302.4l-69.6-69.6c-4.4-4.4-12-4.4-16.4,0
+          L134.4,244c-4.4,4.4-4.4,12,0,16.4l89.2,89.2c4.4,4.4,12,4.4,16.4,0l0,0l0,0l10.4-10.4l0.8-0.8l121.6-121.6
+          C377.2,212.4,377.2,205.2,372.8,200.4z"/>
+        <path d="M253.2,506.4C113.6,506.4,0,392.8,0,253.2S113.6,0,253.2,0s253.2,113.6,253.2,253.2S392.8,506.4,253.2,506.4z M253.2,8
+          C118,8,8,118,8,253.2s110,245.2,245.2,245.2s245.2-110,245.2-245.2S388.4,8,253.2,8z"/>
+        <path d="M231.6,357.2c-4,0-8-1.6-11.2-4.4l-89.2-89.2c-6-6-6-16,0-22l11.6-11.6c6-6,16.4-6,22,0l66.8,66.8L342,186.4
+          c2.8-2.8,6.8-4.4,11.2-4.4c4,0,8,1.6,11.2,4.4l11.2,11.2l0,0c6,6,6,16,0,22L242.8,352.4C239.6,355.6,235.6,357.2,231.6,357.2z
+           M154,233.6c-2,0-4,0.8-5.6,2.4l-11.6,11.6c-2.8,2.8-2.8,8,0,10.8l89.2,89.2c2.8,2.8,8,2.8,10.8,0l132.8-132.8c2.8-2.8,2.8-8,0-10.8
+          l-11.2-11.2c-2.8-2.8-8-2.8-10.8,0L234.4,306c-1.6,1.6-4,1.6-5.6,0l-69.6-69.6C158,234.4,156,233.6,154,233.6z"/>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        </svg>        
+      </div>
     </div>
-    <div class="modal-body">
-      <p>SUCCESS</p>
+    <div class="modal-body mt-2">
+      <h5>Grazie per il tuo interesse</h5>
+      <p>La richiesta è stata inoltrata con successo, ti contatteremo entro 24 ore.</p>
+    </div>
+    <div class="modal-footer mt-2">
+      <button
+      (click)="close()"
+      class="btn--primary rounded-md my-2 w-6/12 mt-6 hover:font-semibold tracking-widest leading-none relative mx-auto"  type="submit" name="s">
+      Continua
+    </button>
     </div>
   </mat-dialog-content>
 
