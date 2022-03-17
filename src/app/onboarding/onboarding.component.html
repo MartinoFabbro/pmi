@@ -127,7 +127,7 @@
       <span class="font-semibold">Giuseppe Mori</span>, VP Cesi
       <p class="mt-3">La semplicità e la facilità di introduzione della piattaforma - bastano tre-quattro giorni per acquisirne la completa padronanza - hanno favorito notevolmente “l’ingaggio” di tutte le persone sia degli acquisti, sia di altre Unità. Il risultato per me più gratificante è vedere come i colleghi coinvolti nel processo d’acquisto in Azienda utilizzino quotidianamente questo strumento senza far ricorso a succedanei di sorta.</p>
     </div>
-    <div class="md:w-full bg--primary__lightblue rounded-2xl mx-5 p-5 mt-5">
+    <div class="md:w-full bg--primary__lightblue rounded-2xl mx-5 p-5 my-5">
       <span class="font-semibold">Giorgio Zagami</span>, VP Explora Journeys
       <p class="mt-3">
         Oltre al risparmio, c’è un’altra faccia dell’efficienza: la digitalizzazione di un’attività così complessa ci ha permesso di far partecipare più fornitori, di eliminare i colli di bottiglia. Il mercato delle crociere, come altri, oggi deve vivere di innovazione. Crediamo che il ruolo del Procurement strategico sia quello di costruire un’interfaccia tra la propria azienda e il resto del mondo esterno, il più ampia possibile, per essere più permeabili.
@@ -144,9 +144,8 @@
 <ng-template #successModal let-modal>
   <mat-dialog-content>
     <div class="modal-header">
-      <div class="bg--primary__lightblue rounded-xl text-center p-5">
-        <?xml version="1.0" encoding="iso-8859-1"?>
-        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <div class="bg--primary__lightblue rounded-xl text-center">
+        <div class="w-2/12 mx-auto">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 506.4 506.4" style="enable-background:new 0 0 506.4 506.4;" xml:space="preserve">
         <circle style="fill:#54B265;" cx="253.2" cy="253.2" r="249.2"/>
@@ -189,14 +188,15 @@
         </g>
         <g>
         </g>
-        </svg>        
+        </svg>  
+        </div>      
       </div>
     </div>
-    <div class="modal-body mt-2">
-      <h5>Grazie per il tuo interesse</h5>
-      <p>La richiesta è stata inoltrata con successo, ti contatteremo entro 24 ore.</p>
+    <div class=" bg--primary__lightblue rounded-xl text-center p-5 modal-body mt-5">
+      <h3>Grazie per il tuo interesse</h3>
+      <p class="mt-2">La richiesta è stata inoltrata con successo, ti contatteremo entro 24 ore.</p>
     </div>
-    <div class="modal-footer mt-2">
+    <div class="modal-footer text-center mt-5">
       <button
       (click)="close()"
       class="btn--primary rounded-md my-2 w-6/12 mt-6 hover:font-semibold tracking-widest leading-none relative mx-auto"  type="submit" name="s">
