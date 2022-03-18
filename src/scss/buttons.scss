@@ -24,8 +24,8 @@
     }
     &--secondary {
         background: transparent;
-        color: white;;
-        border: solid 2px white;;
+        color: white;
+        border: solid 2px white;
         padding:10px 20px;
         overflow: hidden;
         font-weight: 500;
@@ -37,6 +37,11 @@
             transform: translate(5px, 0);
             color: $base-blue;
             }
+        }
+        &__blue {
+            @extend .btn--secondary;
+            border: solid 2px $base-blue;
+            color: $base-blue;
         }
     }
     &--tertiary{

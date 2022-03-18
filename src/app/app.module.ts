@@ -57,6 +57,7 @@ import { OnboardingComponent } from './onboarding/onboarding.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SuppliersComponent } from './suppliers/suppliers.component';
+import { ApprovalFlowComponent } from './approval-flow/approval-flow.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { SuppliersComponent } from './suppliers/suppliers.component';
     FooterComponent,
     PricingComponent,
     OnboardingComponent,
-    SuppliersComponent
+    SuppliersComponent,
+    ApprovalFlowComponent
   ],
   imports: [
     HttpClientModule,
