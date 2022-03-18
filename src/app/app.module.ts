@@ -58,6 +58,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { ApprovalFlowComponent } from './approval-flow/approval-flow.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
@@ -69,7 +71,9 @@ import { ApprovalFlowComponent } from './approval-flow/approval-flow.component';
     PricingComponent,
     OnboardingComponent,
     SuppliersComponent,
-    ApprovalFlowComponent
+    ApprovalFlowComponent,
+    AnalyticsComponent,
+    OrdersComponent
   ],
   imports: [
     HttpClientModule,
