@@ -10,12 +10,7 @@ import { SuppliersComponent } from './suppliers/suppliers.component';
 import { ApprovalFlowComponent } from './approval-flow/approval-flow.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { OrdersComponent } from './orders/orders.component';
-
-
-
-
-
-
+import { IntegrationsComponent } from './integrations/integrations.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -25,12 +20,15 @@ const routes: Routes = [
   { path: 'approval-flow', component: ApprovalFlowComponent},
   { path: 'analytics', component: AnalyticsComponent},
   { path: 'orders', component: OrdersComponent},
+  { path: 'integrations', component: IntegrationsComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   redirectTo: '/home' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled', // Add options right here
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

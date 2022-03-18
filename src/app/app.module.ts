@@ -60,6 +60,7 @@ import { SuppliersComponent } from './suppliers/suppliers.component';
 import { ApprovalFlowComponent } from './approval-flow/approval-flow.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { OrdersComponent } from './orders/orders.component';
+import { IntegrationsComponent } from './integrations/integrations.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { OrdersComponent } from './orders/orders.component';
     SuppliersComponent,
     ApprovalFlowComponent,
     AnalyticsComponent,
-    OrdersComponent
+    OrdersComponent,
+    IntegrationsComponent
   ],
   imports: [
     HttpClientModule,
