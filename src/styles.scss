@@ -279,6 +279,10 @@ h1 {
     transform: scale(1.5);
 }
 
+.bg-high {
+    background: #EEF2FF !important;
+    pointer-events: none;
+}
 // tooltip map
 
 .cdk-overlay-pane {  
