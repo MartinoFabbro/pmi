@@ -11,6 +11,7 @@ import { ApprovalFlowComponent } from './approval-flow/approval-flow.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { OrdersComponent } from './orders/orders.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
+import { PermissionsComponent } from './permissions/permissions.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent},
   { path: 'orders', component: OrdersComponent},
   { path: 'integrations', component: IntegrationsComponent},
+  { path: 'permissions', component: PermissionsComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   redirectTo: '/home' }
 ];

@@ -61,6 +61,7 @@ import { ApprovalFlowComponent } from './approval-flow/approval-flow.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { OrdersComponent } from './orders/orders.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
+import { PermissionsComponent } from './permissions/permissions.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { IntegrationsComponent } from './integrations/integrations.component';
     ApprovalFlowComponent,
     AnalyticsComponent,
     OrdersComponent,
-    IntegrationsComponent
+    IntegrationsComponent,
+    PermissionsComponent
   ],
   imports: [
     HttpClientModule,

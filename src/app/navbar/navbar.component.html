@@ -10,9 +10,8 @@
         <svg class="fill-current h-4 w-4 self-center text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
       </button>
       <ul class="dropdown-menu self-center absolute hidden p-3 w-96 bg-white z-50 shadow-lg rounded-md">
-
+        <a routerLink="suppliers" >
         <li class="rounded hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2" [ngClass]="{'bg-high' : router.url.includes('suppliers')}">
-          <a routerLink="suppliers" >
           <div>
             <div class="flex items-center my-2">
                 <p class="font-medium self-center text-primary">Albo Fornitori</p>
@@ -21,10 +20,10 @@
               <p class="text-gray-400 text-sm font-light">Albo fornitori, onboarding e gestione contratti</p>
             </div>
             </div>
-            </a>
         </li>
+        </a>
+        <a routerLink="orders">
         <li class="rounded hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2" [ngClass]="{'bg-high' : router.url.includes('orders')}">
-          <a routerLink="orders">
           <div>
             <div class="flex">
                 <p class="font-medium self-center text-primary">Ordini</p>
@@ -34,10 +33,10 @@
               </p>
             </div>
             </div>
-          </a>
-        </li>    
+        </li>  
+        </a>  
+        <a routerLink="approval-flow">
         <li class="rounded hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2" [ngClass]="{'bg-high' : router.url.includes('approval-flow')}">
-          <a routerLink="approval-flow">
           <div>
             <div class="flex">
                 <p class="font-medium self-center text-primary">Processi Approvativi</p>
@@ -47,10 +46,10 @@
               </p>
             </div>
             </div>
-          </a>
-        </li>    
+        </li>   
+        </a> 
+        <a routerLink="analytics">
         <li class="rounded hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2" [ngClass]="{'bg-high' : router.url.includes('analytics')}">
-          <a routerLink="analytics">
           <div>
             <div class="flex">
                 <p class="font-medium self-center text-primary">Analitiche</p>
@@ -60,10 +59,10 @@
               </p>
             </div>
             </div>
-          </a>
-        </li>      
+        </li> 
+        </a>    
+        <a routerLink="integrations"> 
         <li class="rounded hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2" [ngClass]="{'bg-high' : router.url.includes('integrations')}">
-          <a routerLink="integrations">
           <div>
             <div class="flex">
                 <p class="font-medium self-center text-primary">Integrazioni</p>
@@ -73,8 +72,21 @@
               </p>
             </div>
             </div>
-          </a>
-        </li>   
+        </li>
+        </a>
+        <a routerLink="permissions">
+        <li class="rounded hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2" [ngClass]="{'bg-high' : router.url.includes('permissions')}">
+          <div>
+            <div class="flex">
+                <p class="font-medium self-center text-primary">Permessi flessibili</p>
+            </div>
+            <div class="p-1 mt-1">
+              <p class="text-gray-400 text-sm font-light">Assegna permessi granulari ad ogni utente
+              </p>
+            </div>
+            </div>
+        </li>  
+        </a> 
       </ul>
     </div>    <div class="dropdown self-center inline-block relative">
         <button class="self-center mx-2 hover:text-black cursor-pointer py-1 flex">
