@@ -1,11 +1,11 @@
-<div class="container-2xl px-5 border-gray mx-auto h-16 md:h-20 py-4 md:mb-16 mb-0">
-<div class="py-2 rounded-sm z-50 md:flex justify-between">
+<div class="container-2xl px-5 border-gray mx-auto md:h-20 py-4 md:mb-16 mb-0 ">
+<div class="py-2 rounded-sm z-50 flex justify-between">
     <img src="/assets/images/logo_procurement24ore.png" class="w-60 self-center mt-0.5 pr-2 cursor-pointer"  alt="Logo" routerLink="home">
-    <div class="flex">
-    <p *ngIf="!router.url.includes('home')" class="self-center mx-2 hover:text-black cursor-pointer rounded-sm py-1 px-2 text-primary" routerLink="home" >Home</p>
-    <p class="self-center mx-2 hover:text-black cursor-pointer rounded-sm py-1 px-2 text-primary" routerLink="pricing" >Pricing</p>
+    <div class="md:flex hidden">
+    <p *ngIf="!router.url.includes('home')" class="self-center md:mx-2 hover:text-black cursor-pointer rounded-sm py-1 md:px-2 text-primary" routerLink="home" >Home</p>
+    <p class="self-center md:mx-2 hover:text-black cursor-pointer rounded-sm py-1 md:px-2 text-primary" routerLink="pricing" >Pricing</p>
     <div class="dropdown self-center inline-block relative">
-      <button class="self-center mx-2 hover:text-black cursor-pointer py-1 flex">
+      <button class="self-center md:mx-2 hover:text-black cursor-pointer py-1 flex">
         <p class="mr-1 text-primary">Funzionalità</p>
         <svg class="fill-current h-4 w-4 self-center text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
       </button>
@@ -88,8 +88,10 @@
         </li>  
         </a> 
       </ul>
-    </div>    <div class="dropdown self-center inline-block relative">
-        <button class="self-center mx-2 hover:text-black cursor-pointer py-1 flex">
+    </div>    
+    <br class="md:hidden block">
+      <div class="dropdown self-center inline-block relative">
+        <button class="self-center md:mx-2 hover:text-black cursor-pointer py-1 flex">
           <p class="mr-1 text-primary">Risorse</p>
           <svg class="fill-current h-4 w-4 self-center text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
         </button>
@@ -134,27 +136,57 @@
           </li>        
         </ul>
       </div>
-    <button class="btn--secondary__blue rounded-md hover:font-semibold tracking-widest leading-none relative whitespace-pre ml-5 self-center" [routerLink]="['onboarding']" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
+    <br class="md:hidden block">
+    <button class="btn--secondary__blue rounded-md hover:font-semibold tracking-widest leading-none relative whitespace-pre md:ml-5 self-center" [routerLink]="['onboarding']" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
       Richiedi una demo
     </button>
   </div>
-</div>
+  <div>
+    <label for="my-modal-3" class="modal-button">    
+      <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
+    </label>
 
-<!-- <div class="flex justify-between px-4 py-2 rounded-sm z-50 relative md:hidden w-full">
-  <img src="/assets/images/logo_procurement24ore.png" class="w-40 self-center mt-0.5 pr-2 cursor-pointer"  alt="Logo" routerLink="home">
-  <div class="dropdown inline-block relative">
-      <button class="self-center mx-2 hover:text-black cursor-pointer py-1 flex">
-        <p class="mr-1">Menu</p>
-        <svg class="fill-current h-4 w-4 self-center" fill="#097a9c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
-      </button>
-      <ul class="dropdown-menu absolute hidden pt-1">
-        <li class=""><p class="rounded-t bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap cursor-pointer" routerLink="pricing">Pricing</p></li>
-        <li class=""><p class="bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap cursor-pointer" routerLink="features">Funzionalità</p></li>
-        <li class=""><p class="bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap cursor-pointer">Blog</p></li>
-        <li class=""><p class="bg-gray-200 hover:text-black py-2 px-4 block whitespace-no-wrap rounded-b cursor-pointer">Consulenza</p></li>
-      </ul>
+<!-- Put this part before </body> tag -->
+    <input type="checkbox" id="my-modal-3" class="modal-toggle">
+    <div class="modal p-10 ali">
+      <div class="modal-box relative rounded-2xl">
+        <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+        <div class="flex">
+          <p routerLink="pricing"><label for="my-modal-3">Pricing</label></p>
+        </div>
+        <hr class="my-3">
+          <p class="text-xs my-5">FUNZIONALITÀ</p>
+          <div class="flex">          
+          <div class="w-6/12 mr-5">
+            <p routerLink="suppliers" class="mt-5"><label for="my-modal-3">Albo Fornitori</label></p>
+            <p routerLink="approval-flow" class="mt-5"><label for="my-modal-3">Approvazioni</label></p>
+            <p routerLink="integrations" class="mt-5"><label for="my-modal-3">Integrazioni</label></p>
+          </div>
+          <div class="w-6/12">
+            <p routerLink="orders" class="mt-5"><label for="my-modal-3">Ordini</label></p>
+            <p routerLink="analytics" class="mt-5"><label for="my-modal-3">Analitiche</label></p>
+            <p routerLink="permissions" class="mt-5"><label for="my-modal-3">Permessi Flessibili</label></p>
+          </div>
+          </div>
+        <hr class="my-3 mt-6">
+        <p class="text-xs my-5">RISORSE</p>
+        <div class="flex">          
+          <div class="w-6/12 mr-5">
+            <a href="https://www.niuma.it/blog/" target="_blank">
+              <p class="mt-5">Blog</p>
+            </a>
+            <a href=" https://tipiem.procurement24ore.it" target="_blank">
+              <p class="mt-5">Consulenze</p>
+            </a>
+          </div>
+          <div class="w-6/12 ">
+            <a href="https://www.niuma.it/come-gefran-ha-migliorato-lefficienza-degli-acquisti-grazie-alla-digitalizzazione-del-procurement-case-study/" target="_blank">
+              <p class="mt-5">Case Study | Gefran</p>
+            </a>
+          </div>
+          </div>
+      </div>
     </div>
-</div> -->
-
-
+  </div>
+</div>
 </div>
