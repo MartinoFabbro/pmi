@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule, ActivatedRoute, Router } from '@angular/router';
+import * as $ from 'jquery' 
 
 @Component({
   selector: 'app-navbar',

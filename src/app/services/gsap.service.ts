@@ -5,8 +5,7 @@ import { ScrollTrigger } from 'gsap/all';
 import { gsap, Power2, Elastic, TweenMax } from 'gsap/all';
 
 
-declare var $:JQueryStatic;
-
+import * as $ from 'jquery' 
 
 @Injectable({
 providedIn: 'root'

@@ -81,7 +81,7 @@ import { PermissionsComponent } from './permissions/permissions.component';
   ],
   imports: [
     HttpClientModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgsRevealModule,
     A11yModule,
