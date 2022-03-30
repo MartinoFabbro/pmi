@@ -1,0 +1,41 @@
+<ngx-spinner>
+    <div class="la-ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</ngx-spinner>
+<section class="bg--primary__gray__gradient border-bottom-line px-2 md:px-0 min-h-screen">
+<div class="md:p-24 p-12">
+    <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary text-center">Blog</h1>
+    <p class="text-center mt-4">Gli ultimi articoli dal mondo degli acquisti</p>
+</div>
+<div class="text-center font-bold pb-24" *ngIf="errorMessage">
+    <h1 class="text-2xl  md:text-2xl lg:text-3xl xl:text-4xl md:leading-tight font-bold">:(</h1>
+    <br>
+    {{errorMessage}}
+</div>
+<div *ngFor="let post of blogPosts">
+    <div class="container mx-auto md:pb-20 px-5">
+        <a [routerLink]="['/posts', post.id]" class="block mb-10 overflow-hidden transition-shadow duration-300 ease-in-out bg-white rounded-lg shadow-md md:mb-22 hover:shadow-xl">
+        <img src="{{post.jetpack_featured_media_url}}" alt="">
+        <div class="p-12">
+            <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary" [innerHtml]="post.title.rendered"></h1>
+            <p class="mt-4" [innerHtml]="post.excerpt.rendered">
+            </p>
+            <p class="mt-6 text-gray-400">
+                {{post.date | date}}
+            </p>
+        </div>
+        </a>
+    </div>
+</div>
+<div class="pb-12 px-5 md:px-0">
+    <div class="md:mb-12 rounded-2xl md:px-24 container mx-auto text-center">
+      <h1 class="text-3xl md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary">Continua a scoprire il mondo del procurement direttamente sul sito di Niuma</h1>
+      <a class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative whitespace-pre self-center mt-12" href="https://www.niuma.it/blog/page/2/" target="_blank" style="min-width: min-content; height: fit-content;" type="button">
+        Scopri nuovi articoli
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,6 +62,12 @@ import { AnalyticsComponent } from './analytics/analytics.component';
 import { OrdersComponent } from './orders/orders.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
 import { PermissionsComponent } from './permissions/permissions.component';
+import { BlogComponent } from './blog/blog.component';
+import { SinglePostComponent } from './single-post/single-post.component';
+import { BlogService } from './blog.service';
+// Import library module
+import { NgxSpinnerModule } from "ngx-spinner";
+ 
 
 
 @NgModule({
@@ -77,10 +83,14 @@ import { PermissionsComponent } from './permissions/permissions.component';
     AnalyticsComponent,
     OrdersComponent,
     IntegrationsComponent,
-    PermissionsComponent
+    PermissionsComponent,
+    BlogComponent,
+    SinglePostComponent
   ],
   imports: [
     HttpClientModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgsRevealModule,
@@ -128,11 +138,13 @@ import { PermissionsComponent } from './permissions/permissions.component';
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    BrowserAnimationsModule,
     MdePopoverModule,
     FormsModule,
-    ReactiveFormsModule],
-  providers: [],
-  bootstrap: [AppComponent]
+    ReactiveFormsModule,
+    HttpClientModule
+],
+  providers: [BlogService],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

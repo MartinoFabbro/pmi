@@ -12,6 +12,9 @@ import { AnalyticsComponent } from './analytics/analytics.component';
 import { OrdersComponent } from './orders/orders.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
 import { PermissionsComponent } from './permissions/permissions.component';
+import { BlogComponent } from './blog/blog.component';
+import { SinglePostComponent } from './single-post/single-post.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -23,6 +26,8 @@ const routes: Routes = [
   { path: 'orders', component: OrdersComponent},
   { path: 'integrations', component: IntegrationsComponent},
   { path: 'permissions', component: PermissionsComponent},
+  { path: 'posts/:id', component: SinglePostComponent},
+  { path: 'blog', component: BlogComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   redirectTo: '/home' }
 ];

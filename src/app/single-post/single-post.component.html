@@ -1,0 +1,39 @@
+<ngx-spinner>
+    <div class="la-ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</ngx-spinner>
+<section class="bg--primary__gray__gradient border-bottom-line px-2 md:px-0 min-h-screen">
+<div class="text-center font-bold pb-24" *ngIf="errorMessage">
+    <h1 class="text-2xl  md:text-2xl lg:text-3xl xl:text-4xl md:leading-tight font-bold">:(</h1>
+    <br>
+    {{errorMessage}}
+</div>
+<div *ngIf="SinglePosts">
+    <div class="container mx-auto md:pb-20 px-5 md:px-0">
+        <p routerLink="../../blog" class="my-6 text-xl cursor-pointer">← Blog</p>
+        <div class="block mb-10  md:mb-22">
+        <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary mt-12 text-center" [innerHtml]="SinglePosts.title.rendered"></h1>
+        <p [innerHtml]="authorName.name" class="text-center my-6 text-xl"></p>
+        <img src="{{SinglePosts.jetpack_featured_media_url}}" alt="{{SinglePosts.title.rendered}}" class="mx-auto rounded-xl shadow-md  my-12">
+        <div class="mx-auto mt-6">
+            <p class="mt-4" [innerHtml]="SinglePosts.content.rendered">
+            </p>
+            <p class="mt-6">
+                {{SinglePosts.date | date}}
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="pb-12 px-5 md:px-0">
+    <div class="md:my-12 rounded-2xl tipiem-bg md:p-12 p-5 py-12 container mx-auto text-center">
+      <h1 class="text-3xl md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-white">Scopri come possiamo aiutarti ad ottenere controllo totale sugli acquisti aziendali   </h1>
+      <button class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative whitespace-pre self-center mt-12" routerLink="../../onboarding" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
+        Richiedi una demo gratuita
+      </button>
+    </div>
+  </div>
+</section>
