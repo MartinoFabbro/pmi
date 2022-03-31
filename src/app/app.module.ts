@@ -67,6 +67,7 @@ import { SinglePostComponent } from './single-post/single-post.component';
 import { BlogService } from './blog.service';
 // Import library module
 import { NgxSpinnerModule } from "ngx-spinner";
+import { CustomersComponent } from './customers/customers.component';
  
 
 
@@ -85,7 +86,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     IntegrationsComponent,
     PermissionsComponent,
     BlogComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    CustomersComponent
   ],
   imports: [
     HttpClientModule,

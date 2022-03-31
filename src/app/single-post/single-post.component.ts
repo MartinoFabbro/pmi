@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { BlogService } from '../blog.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'app-single-post',
@@ -15,7 +17,7 @@ export class SinglePostComponent implements OnInit {
   authorId: string;
   authorName: any;
 
-  constructor(private blogService: BlogService, private spinner: NgxSpinnerService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private blogService: BlogService, private spinner: NgxSpinnerService, private route: ActivatedRoute, private router: Router, private _location: Location) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id') as string;
@@ -39,6 +41,10 @@ export class SinglePostComponent implements OnInit {
         this.router.navigate(['/blog'])
       }
     )
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
   getAuthor() {

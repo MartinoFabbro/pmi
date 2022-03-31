@@ -14,6 +14,7 @@ import { IntegrationsComponent } from './integrations/integrations.component';
 import { PermissionsComponent } from './permissions/permissions.component';
 import { BlogComponent } from './blog/blog.component';
 import { SinglePostComponent } from './single-post/single-post.component';
+import { CustomersComponent } from './customers/customers.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent},
   { path: 'orders', component: OrdersComponent},
   { path: 'integrations', component: IntegrationsComponent},
+  { path: 'customers', component: CustomersComponent},
   { path: 'permissions', component: PermissionsComponent},
   { path: 'posts/:id', component: SinglePostComponent},
   { path: 'blog', component: BlogComponent},

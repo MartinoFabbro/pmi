@@ -6,26 +6,28 @@
     </div>
 </ngx-spinner>
 <section class="bg--primary__gray__gradient border-bottom-line px-2 md:px-0 min-h-screen">
+<div class="md:p-24 p-12">
+    <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary text-center">Success Stories</h1>
+    <p class="text-center mt-4">Alcune storie dai clienti che ci hanno scelti</p>
+</div>
 <div class="text-center font-bold pb-24" *ngIf="errorMessage">
     <h1 class="text-2xl  md:text-2xl lg:text-3xl xl:text-4xl md:leading-tight font-bold">:(</h1>
     <br>
     {{errorMessage}}
 </div>
-<div *ngIf="SinglePosts">
-    <div class="container mx-auto md:pb-20 px-5 md:px-0">
-        <p (click)="backClicked()" class="my-6 text-xl cursor-pointer">← Indietro</p>
-        <div class="block mb-10  md:mb-22">
-        <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary mt-12 text-center" [innerHtml]="SinglePosts.title.rendered"></h1>
-        <p [innerHtml]="authorName.name" class="text-center my-6 text-xl"></p>
-        <img src="{{SinglePosts.jetpack_featured_media_url}}" alt="{{SinglePosts.title.rendered}}" class="mx-auto rounded-xl shadow-md  my-12">
-        <div class="mx-auto mt-6">
-            <p class="mt-4" [innerHtml]="SinglePosts.content.rendered">
+<div *ngFor="let post of blogPosts">
+    <div class="container mx-auto md:pb-20">
+        <a [routerLink]="['/posts', post.id]" class="block mb-10 overflow-hidden transition-shadow duration-300 ease-in-out bg-white rounded-xl shadow-md md:mb-22 hover:shadow-xl">
+        <img src="{{post.jetpack_featured_media_url}}" alt="">
+        <div class="p-12">
+            <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-primary" [innerHtml]="post.title.rendered"></h1>
+            <p class="mt-4" [innerHtml]="post.excerpt.rendered">
             </p>
-            <p class="mt-6">
-                {{SinglePosts.date | date}}
+            <p class="mt-6 text-gray-400">
+                {{post.date | date}}
             </p>
         </div>
-    </div>
+        </a>
     </div>
 </div>
 <div class="pb-12 px-5 md:px-0">

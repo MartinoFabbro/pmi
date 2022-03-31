@@ -16,6 +16,11 @@ getPosts() {
   return this.http.get(url).pipe(catchError(this.errorHandlder))
 } 
 
+getSuccessStories() {
+  const url = `${this.blogUrl}/wp-json/wp/v2/posts/?categories=108`
+  return this.http.get(url).pipe(catchError(this.errorHandlder))
+}
+
 getAuthor(id: any) {
   const url = `${this.blogUrl}/wp-json/wp/v2/users/${id}`
   return this.http.get(url).pipe(catchError(this.errorHandlder))
