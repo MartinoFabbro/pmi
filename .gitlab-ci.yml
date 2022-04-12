@@ -8,7 +8,7 @@ stages:
 
 build:
    stage: build
-   script: /usr/bin/npm run prerender && ls -latr
+   script: npm install && /usr/bin/npm run prerender && ls -latr
 #   script: pwd && ls -latr && npm install && /usr/bin/npm run prerender
    artifacts:
     name: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
