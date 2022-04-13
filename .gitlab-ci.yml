@@ -13,25 +13,24 @@ build:
    artifacts:
     name: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
-      - builds/XsimEuqb/0/m.fabbro/procurement24ore-landing-page/dist
+      - ./dist
 
 #deploy_procurement24ore-landing-page:
 #  stage: deploy
-#
+# 
 #  script:
-    #- sshpass -V
-    #- export SSHPASS=$USER_ALBINI_DEV_PASS
-#    - scp -o stricthostkeychecking=no -r builds/XsimEuqb/0/m.fabbro/procurement24ore-landing-page albinidev@192.168.10.217:/var/www/pmi/landing/
-#    - ssh albinidev@192.168.10.217 'echo "albinidev" | sudo -S pm2 restart main'
+#    - ssh procland@192.168.7.48 'echo "procland" | [ "$( sudo /usr/bin/pm2 status main | grep online )"] && sudo /usr/bin/pm2 stop main'
+#    - ssh procland@192.168.7.48 'echo "procland" | [ -d /var/www/pmi/landing/dist ] && rm -rf /var/www/pmi/landing/dist
+#    - scp -o stricthostkeychecking=no -r ./dist procland@192.168.7.48:/var/www/pmi/landing/
+#    - ssh procland@192.168.7.48 'echo "procland" | sudo /usr/bin/chown -R procland:procland /var/www/pmi/landing/dist'
+#    - ssh procland@192.168.7.48 'echo "procland" | sudo -S /usr/bin/pm2 start main'
 
 #  environment:
-#    name: ALBINI DEV
-#    url: 192.168.10.217
+#    name: PROCUREMENT24ORE LANDINGPAGE
+#    url: 192.168.7.48:4000
 #  when: manual
 #  only:
-#    - support/EPP-R29-HFIX#1621
-#    - feature/EPP-NFET#NIUM-131
-#    - hotfix/EPP-R38-HFIX#AS-327
+#    - master
 
 
 after_script:
