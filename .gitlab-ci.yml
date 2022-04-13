@@ -19,7 +19,7 @@ deploy_procurement24ore-landing-page:
   stage: deploy
  
   script:
-    - ssh procland@192.168.7.48 'echo "procland" | [ "$( sudo /usr/bin/pm2 status main | grep online )"] && echo "servizio running" || echo "Errore"'    
+    - ssh procland@192.168.7.48 'echo "procland" | [ "$( sudo /usr/bin/pm2 status main | grep online )" ] && echo "servizio running" || echo "Errore"'    
 #    - ssh procland@192.168.7.48 'echo "procland" | [ "$( sudo /usr/bin/pm2 status main | grep online )"] && sudo /usr/bin/pm2 stop main'
 #    - ssh procland@192.168.7.48 'echo "procland" | [ -d /var/www/pmi/landing/dist ] && rm -rf /var/www/pmi/landing/dist
 #    - scp -o stricthostkeychecking=no -r ./dist procland@192.168.7.48:/var/www/pmi/landing/
