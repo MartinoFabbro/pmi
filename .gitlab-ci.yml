@@ -3,7 +3,7 @@
     
 stages:
   - build
-#  - deploy
+  - deploy
 
 
 build:
