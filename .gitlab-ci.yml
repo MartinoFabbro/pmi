@@ -12,17 +12,17 @@ build:
 #   script: pwd && ls -latr && npm install && /usr/bin/npm run prerender
    artifacts:
     name: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
-#    paths:
-#      - build/libs/epp.jar
+    paths:
+      - builds/XsimEuqb/0/m.fabbro/procurement24ore-landing-page/dist
 
-#deploy_albini_dev:
+#deploy_procurement24ore-landing-page:
 #  stage: deploy
 #
 #  script:
     #- sshpass -V
     #- export SSHPASS=$USER_ALBINI_DEV_PASS
-#    - scp -o stricthostkeychecking=no -r build/libs/epp.jar albinidev@192.168.10.217:/opt/albini-dev
-#    - ssh albinidev@192.168.10.217 'echo "albinidev" | sudo -S systemctl restart albini-dev.service'
+#    - scp -o stricthostkeychecking=no -r builds/XsimEuqb/0/m.fabbro/procurement24ore-landing-page albinidev@192.168.10.217:/var/www/pmi/landing/
+#    - ssh albinidev@192.168.10.217 'echo "albinidev" | sudo -S pm2 restart main'
 
 #  environment:
 #    name: ALBINI DEV
