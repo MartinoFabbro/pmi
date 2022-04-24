@@ -68,6 +68,7 @@ import { BlogService } from './blog.service';
 // Import library module
 import { NgxSpinnerModule } from "ngx-spinner";
 import { CustomersComponent } from './customers/customers.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
  
 
 
@@ -143,7 +144,8 @@ import { CustomersComponent } from './customers/customers.component';
     MdePopoverModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ScullyLibModule
 ],
   providers: [BlogService],
   bootstrap: [AppComponent],

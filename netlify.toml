@@ -1,0 +1,4 @@
+[build]
+  command = "ng build --prod && npm run scully"
+  functions = "netlify/functions"
+  publish = "dist/static"

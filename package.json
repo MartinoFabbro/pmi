@@ -11,7 +11,10 @@
     "dev:ssr": "ng run pmi:serve-ssr",
     "serve:ssr": "node dist/pmi/server/main.js",
     "build:ssr": "ng build && ng run pmi:server",
-    "prerender": "ng run pmi:prerender"
+    "prerender": "ng run pmi:prerender",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --",
+    "build:prod": "ng build --prod && scully --prod --scanRoutes"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +32,11 @@
     "@material-extended/mde": "^3.0.3",
     "@ngneat/tailwind": "^6.0.3",
     "@nguniversal/express-engine": "^12.1.0",
+    "@scullyio/init": "^2.1.32",
+    "@scullyio/ng-lib": "^2.1.0",
+    "@scullyio/platform-server": "^2.1.0",
+    "@scullyio/scully": "^2.1.0",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.32",
     "daisyui": "^1.13.0",
     "express": "^4.15.2",
     "flowbite": "^1.3.4",
