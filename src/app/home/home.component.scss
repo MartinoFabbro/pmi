@@ -22,6 +22,10 @@ $breakpoints: (phone: 640px,
 .h-600 {
   height: 600px;
 }
+
+.h-200 {
+  height: 200px;
+}
 }
 
 @keyframes w1anim {
@@ -262,6 +266,3 @@ transform: rotate(
     }
 }
 
-.h-200 {
-  height: 200px;
-}

@@ -53,14 +53,38 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto md:pb-24 pb-12 mt-32 md:mt-12 md:flex justify-around opacity-80">
+    <div class="container mx-auto md:pb-24 pb-12 mt-32 md:mt-12 opacity-80">
+      <div class="block md:hidden">
+      <div class="flex md:block">
+      <div class="md:my-0 my-4 w-6/12 md:w-full">
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">25.000 +</h1>
+        <p class="pt-2 text-center ">Fornitori Censiti</p>
+      </div>
+      <div class="md:my-0 my-4 w-6/12 md:w-full">
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center "> 14.5 % </h1>
+        <p class="pt-2 text-center ">Saving medio <span class="hidden md:block">dopo 1 anno</span> </p>
+      </div>
+    </div>
+    <div class="flex md:block">
+      <div class="md:my-0 my-4 w-6/12 md:w-full">
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">10.000 + </h1>
+        <p class="pt-2 text-center ">OdA Eseguiti</p>
+      </div>
+      <div class="md:my-0 my-4 w-6/12 md:w-full">
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">8000 + </h1>
+        <p class="pt-2 text-center ">Approvazioni <span class="hidden md:block">effettuate</span></p>
+      </div>
+    </div>
+    </div>
+
+    <div class="md:flex hidden justify-around">
       <div class="md:my-0 my-4">
         <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">25.000 +</h1>
         <p class="pt-2 text-center ">Fornitori Censiti</p>
       </div>
       <div class="md:my-0 my-4">
         <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center "> 14.5 % </h1>
-        <p class="pt-2 text-center ">Saving medio dopo 1 anno</p>
+        <p class="pt-2 text-center ">Saving medio <span class="hidden md:block">dopo 1 anno</span> </p>
       </div>
       <div class="md:my-0 my-4">
         <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">10.000 + </h1>
@@ -68,8 +92,9 @@
       </div>
       <div class="md:my-0 my-4">
         <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">8000 + </h1>
-        <p class="pt-2 text-center ">Approvazioni effettuate</p>
+        <p class="pt-2 text-center ">Approvazioni <span class="hidden md:block">effettuate</span></p>
       </div>
+    </div>
     </div>
     </section>
     <!-- <section class="overflow-hidden md:pt-12 pt-6 relative px-5 md:px-0">
@@ -95,7 +120,7 @@
         <div class="md:py-12 py-6 overflow-hidden bg-white">
           <div class="container mx-auto">
               <h1 class="text-2xl  md:text-3xl lg:text-4xl md:leading-tight text-primary px-5 md:px-0">Una piattaforma semplice e intuitiva per rispondere a tutte le esigenze di <span>  procurement della tua azienda</span>  </h1>
-            <div class="md:flex row mt-12">
+            <div class="md:flex row mt-8">
               <div class="md:w-6/12 md:mr-8">
                 <div class="bg--primary__gray flex-col items-center rounded-xl p-5 overflow-hidden h-600 mx-5 md:mx-0">
                   <h1 class="text-xl md:text-xl lg:text-2xl md:leading-tight my-5 text-primary md:px-12">Albo Fornitori Digitale</h1>
@@ -141,37 +166,37 @@
           </div>
           </div>
         </div>
-        <div class="md:py-24 py-12 container mx-auto">
-          <div class="mx-auto flex justify-between">
+        <div class="md:py-24 py-12 container mx-auto px-5 md:px-0">
+          <div class="mx-auto md:flex justify-between">
             <h1 class="text-3xl  md:text-3xl lg:text-4xl md:leading-tight text-primary">Perché <span>Procurement24Ore</span></h1>
-            <button class="btn--primary hover:font-semibold tracking-widest leading-none relative self-center h-12 bottom-4" routerLink="../onboarding" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
+            <button class="btn--primary hover:font-semibold tracking-widest leading-none relative self-center h-12 md:bottom-4 md:mt-0 mt-4" routerLink="../onboarding" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
               Richiedi una demo gratuita
             </button>
           </div>
           <div class="md:flex row mt-6">
-            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200 mt-8 md:mt-8">
               <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Basta disordine</h1>
               <p>Gestisci fornitori, ordini e approvazioni da un'unica piattaforma, basta mail, fogli di calcolo e ticket sparsi.</p>
             </div>
-            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl md:mx-8 h-200">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl md:mx-8 h-200 mt-8 md:mt-8">
               <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Semplice da usare</h1>
               <p>Grazie a un'interfaccia leggera e immediata il tuo team può iniziare a usare la piattaforma immediatamente.</p>
             </div>
-            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200 mt-8 md:mt-8">
               <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Scambi Immediati</h1>
               <p>Interagisci con tutti gli aspetti della piattaforma attraverso mail, la registrazione alla piattaforma per i tuoi fornitori è opzionale.</p>
             </div>
           </div>
           <div class="md:flex row md:mt-8">
-            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200 mt-8 md:mt-8">
               <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Integrabile</h1>
               <p>Integra la piattaforma con i tuoi sistemi di fatturazione o ERP.</p>
             </div>
-            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl md:mx-8 h-200">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl md:mx-8 h-200 mt-8 md:mt-8">
               <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Visione completa</h1>
               <p>Prendi decisioni in autonomia grazie a un accesso costante alle tue spese.</p>
             </div>
-            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200 mt-8 md:mt-8">
               <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Multicanale</h1>
               <p>Interagisci automaticamente con i tuoi fornitori tramite email, SMS, Whatsapp o Voce.</p>
 
@@ -191,7 +216,7 @@
         </div>
       </div>
     <section class="md:mb-36 mb-18 md:px-5">
-      <div class="md:mt-12 mt-6 container md:flex relative md:mx-auto">
+      <div class="mt-12 container md:flex relative md:mx-auto">
         <div class="md:w-8/12 p-5 mx-5 md:mx-0 md:p-12 rounded-xl relative z-10 tipiem-bg md:mr-8">
           <div class="md:px-0 px-2">
               <div class="md:p-0 p-4">
@@ -209,7 +234,7 @@
         </div>
         <div class="md:w-4/12 mt-12 md:mt-0 right-0 ml-auto relative">
           
-          <div class="bg--primary__gray flex flex-col justify-center rounded-xl h-full  p-5 overflow-hidden">
+          <div class="bg--primary__gray flex flex-col justify-center rounded-xl h-full  p-5 overflow-hidden md;mx-0 mx-5 mb-32 md:mb-0">
             <div class="flex flex-col justify-between">
                 <div class="text-xl text-primary my-8 uppercase flex">
                   <svg width="24" height="24" class="mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
