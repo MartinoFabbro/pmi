@@ -25,18 +25,19 @@ p {
 }
 
 .text {
-    &-purple {
-        color: $base-purple !important
-    }
     &-gray {
         color: $base-gray-dark
     }
     &-primary {
-        color: $base-blue !important;
+        color: #005a7c !important;
         &__yellow {
         color: $base-yellow !important;
         }
     }
+}
+
+.accent-color {
+    color: #16c8f2 !important;
 }
 
 .font-poppins {

@@ -1,95 +1,80 @@
-    <section class="bg--primary__gray__gradient border-bottom-line px-5 md:px-0">
+    <section class="px-5 md:px-0">
     <div class="container-2xl mx-auto md:pb-20 px-0 md:px-5">
 
       <div class="hero w-full rounded-2xl relative mt-12 md:mt-24 ">
-        <div class="md:px-16 px-4 md:py-24 py-6 rounded-md mx-3 md:mx-0">
-          <h1 class="text-4xl  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight text-white">Reinventa </h1>
-          <h1 class="text-4xl  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight mt-3 stroke-white h-20 z-10 relative hidden md:block" style="width: fit-content;" id="spin"></h1>
-          <h1 class="text-4xl  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight mt-3 stroke-white h-20 z-10 relative block md:hidden" style="width: fit-content;">Gli acquisti aziendali</h1>
+        <div class="md:-ml-16 md:py-24 md:p-5 mx-3 md:mx-0 hm">
+          <h1 class="text-2xl  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight text-primary pt-5 md:pt-0 px-5 md:px-0">Reinventa </h1>
+          <h1 class="text-3xl  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight mt-3 text-primary h-20 z-10 relative hidden md:block" style="width: fit-content;" id="spin"></h1>
+          <h1 class="text-2xl  md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight md:mt-3 text-primary mb-6 z-10 relative block md:hidden px-5" style="width: fit-content;">Gli acquisti aziendali</h1>
 
-          <p class="md:mb-10 mb-4 lg:mt-6 md:w-3/6 sm:w-100 text-xl text-white mt-12 md:mt-0">
+          <p class="md:mb-10 mb-4 lg:mt-6 md:w-3/6 sm:w-100 text-xl px-5 md:px-0">
             Trasformiamo il tuo modo di lavorare semplificando e <span>strutturando</span> gli acquisti aziendali e la gestione dei fornitori.
           </p>
 
           <div id="form-sub">
-          <form class="w-full sticky top-0 md:mb-10 mb-48 " id="trigger-product" >
-            <div class="md:flex hidden items-center">
-            <div class="w-6/12 md:items-center">
-                <input [formControl]="emailInputControl" class="shadow-md opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
-            </div>
-              <button 
-              #tooltip="matTooltip"
-              matTooltip="Inserisci la tua mail aziendale per continuare" 
-              [matTooltipDisabled]="emailInputControl.valid"
-              (mouseenter)="$event.stopImmediatePropagation()" 
-              (mouseleave)="tooltip.hide()"          
-              (click)="copy(); onboarding('Demo')"
-              matTooltipPosition="above"
-              class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative right-40 whitespace-pre" 
-              style="min-width: min-content;">
+          <form class="w-full sticky top-0 md:mb-10 mb-60" id="trigger-product" >
+            <div class="items-center">
+              <button class="btn--primary hover:font-semibold tracking-widest leading-none relative self-center md:h-16 h-12 md:px-16 px-12 bottom-4 mt-4 md:mt-0 mx-5 md:mx-0" routerLink="../onboarding" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
                 Inizia Ora
               </button>
           </div>
-          <div class="md:hidden items-center">
-            <div class="md:flex md:items-center">
-                <input [formControl]="emailInputControl" class="shadow-md opacity-70 w-full form--primary bg-gray-100 pl-5 rounded-md border-none h-16 tracking-wide" id="inline-full-name_2" type="text" placeholder="Inserisci la tua mail aziendale..." type="email"/>
-            </div>
-                <button 
-                matTooltip="Inserisci la tua mail aziendale per continuare" 
-                [matTooltipDisabled]="emailInputControl.valid"
-                #tooltip="matTooltip"
-                matTooltip="Inserisci la tua mail aziendale per continuare" 
-                [matTooltipDisabled]="emailInputControl.valid"
-                (mouseenter)="$event.stopImmediatePropagation()" 
-                (mouseleave)="tooltip.hide()"          
-                (click)="copy(); onboarding('Demo')"
-                matTooltipPosition="above"
-                class="btn--primary rounded-md my-2 w-full hover:font-semibold tracking-widest leading-none relative" 
-                style="min-width: min-content;">
-                  Inizia Ora
-                </button>
-          </div>
           </form>
         </div>
-        <div class="bg-white rounded-lg md:p-8 m-2 p-2 md:absolute relative md:right-8 md:bottom-16 md:w-5/12 font-semibold flex shadow-md">
+        <div class="md:block hidden">
+        <div class="bg-white bottom-12 rounded-lg md:p-8 m-2 p-2 md:absolute relative md:right-8 md:bottom-16 md:w-5/12 font-semibold flex shadow-md">
           <div class="self-center">
-            <img src="../../assets/images/quote.svg" alt="virgolette" class="md:w-16 w-40">
+            <img src="../../assets/images/quote.svg" alt="virgolette" class="md:w-8 w-20 -mt-8">
           </div>
-            <p class="px-5 text-primary font-normal">
+            <p class="px-5 font-normal">
               Se siamo cresciuti più del 5% nelle quotazioni è anche grazie al software Niuma
             </p>
         </div>
         <div class="bg-white rounded-lg md:p-5 p-2 md:absolute relative md:right-28 whitespace-pre md:-bottom-8 mx-2 font-semibold flex shadow-md mt-6 md:mt-0">
-        <div class="text-primary font-poppins">
-          Stefano Mazzola <br>
-          <span class="font-normal">CPO Gefran SpA</span> 
+        <div>
+          <span class="text-primary">
+            Stefano Mazzola 
+          </span>
+          <br>
+          <span class="font-normal text-gray-500 mt-3">CPO Gefran SpA</span> 
         </div>
+        </div>
+        </div>
+        <div class="block md:hidden">
+          <div class="bg-white rounded-lg m-2 p-2 py-6 md:absolute relative font-semibold flex flex-col shadow-md">
+              <p class="px-5 font-normal italic">
+                "Se siamo cresciuti più del 5% nelle quotazioni è anche grazie al software Niuma"
+                <br>
+              </p>
+              <span class="font-normal px-5 mt-2"> 
+                Stefano Mazzola - CPO Gefran
+              </span>               
+          </div>
         </div>
         </div>
       </div>
     </div>
-    <div class="container mx-auto md:pb-24 pb-12 mt-12 md:flex justify-around opacity-80">
+    <div class="container mx-auto md:pb-24 pb-12 mt-32 md:mt-12 md:flex justify-around opacity-80">
       <div class="md:my-0 my-4">
-        <h1 class="text-2xl   md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center">25.000 +</h1>
-        <p class="pt-2 text-gray-400 text-center ">Fornitori Censiti</p>
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">25.000 +</h1>
+        <p class="pt-2 text-center ">Fornitori Censiti</p>
       </div>
       <div class="md:my-0 my-4">
-        <h1 class="text-2xl   md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center "> 14.5 % </h1>
-        <p class="pt-2 text-gray-400 text-center ">Saving medio dopo 1 anno</p>
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center "> 14.5 % </h1>
+        <p class="pt-2 text-center ">Saving medio dopo 1 anno</p>
       </div>
       <div class="md:my-0 my-4">
-        <h1 class="text-2xl   md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center">10.000 + </h1>
-        <p class="pt-2 text-gray-400 text-center ">OdA Eseguiti</p>
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">10.000 + </h1>
+        <p class="pt-2 text-center ">OdA Eseguiti</p>
       </div>
       <div class="md:my-0 my-4">
-        <h1 class="text-2xl   md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center">8000 + </h1>
-        <p class="pt-2 text-gray-400 text-center ">Approvazioni effettuate</p>
+        <h1 class="text-2xl   md:text-3xl lg:text-4xl md:leading-tight accent-color text-center">8000 + </h1>
+        <p class="pt-2 text-center ">Approvazioni effettuate</p>
       </div>
     </div>
     </section>
-    <section class="bg--primary__gray overflow-hidden md:pt-24 pt-12 relative px-5 md:px-0">
-      <div class="mx-auto text-center -mb-12">
-        <h1 class="text-3xl text-primary mb-20  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight">Tu sviluppi il tuo business <br> <span class="text-gradient">Procurement24Ore </span>fa il resto </h1>
+    <!-- <section class="overflow-hidden md:pt-12 pt-6 relative px-5 md:px-0">
+      <div class="mx-auto text-center -mb-16">
+        <h1 class="text-3xl text-primary mb-20  md:text-3xl lg:text-4xl md:leading-tight">Tu sviluppi il tuo business <br> <span>Procurement24Ore </span>fa il resto </h1>
       </div>
       <div class="container mx-auto">
       <div class="flex relative">
@@ -103,305 +88,111 @@
         </div>
       </div>
       </div>
-    </section>
+    </section> -->
     <section>
-      <div class="bg--primary__gray md:pt-24 pt-12">
-        <div class="">
-        <div class="md:py-24 py-12 overflow-hidden" style="background-color: white">
+      <div>
+        <div>
+        <div class="md:py-12 py-6 overflow-hidden bg-white">
           <div class="container mx-auto">
-            <div class="mb-24">
-              <h1 class="text-3xl  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary text-center px-5 md:px-0">Una piattaforma semplice e intuitiva per rispondere a tutte le esigenze di <span class="text-gradient__white">  procurement della tua azienda</span>  </h1>
-            </div>
-            <div class="md:flex">
-            <div class="">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item bg-white">
-                  <h2 class="accordion-header mb-0" id="headingOne">
-                    <button #switch class="
-                      accordion-button
-                      shadow-none
-                      relative
-                      flex
-                      items-center
-                      py-4
-                      px-5
-                      text-base text-gray-800 text-left
-                      bg-white
-                      border-0
-                      rounded-none
-                      transition
-                      focus:outline-none
-                    " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                      aria-controls="collapseOne">
-                      <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary mr-5">Albo Fornitori Digitale</h1>
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show w-screen" style="width: 1100px;" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body w-screen py-4 px-5">
-                        <div class="flex container">
-                        <div class="pr-8">
-                          <p class="text-gray-900 leading-7">
-                            Gestisci in maniera automatizzata il tuo albo fornitori. Con Procurement24Ore puoi censire i fornitori in un clic: scegli se importarli da elenchi preesistenti, registrarli manualmente o invitare il fornitore a compilare la sua scheda anche senza necessità di registrarsi alla piattaforma.</p>        
-                          <button routerLink="../suppliers" class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                            Scopri l'albo fornitori <span class="arrow absolute pl-1">→</span>
-                          </button>
-                          <div class="">
-                            <div class="py-8 md:my-0">
-                              <p class="flex font-medium">
-                                <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                                Hub documentale e scadenziario</p>
-                            </div>
-                            <div class="mp-8 md:my-0">
-                              <p class="flex font-medium">
-                                <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                                Ricerca avanzata dei fornitori</p>
-                            </div>
-                            <div class="py-8 md:my-0">
-                              <p class="flex font-medium">
-                                <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                                Processi di censimento multipli</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="hidden md:block">
-                            <object type="image/svg+xml" data="../../assets/images/1-animazione-fornitori.svg" class="rounded-2xl relative bg--primary__gray shadow-md" width="500px" alt="Feature 1">
-                            </object>          
-                        </div>
-                      </div>
+              <h1 class="text-2xl  md:text-3xl lg:text-4xl md:leading-tight text-primary px-5 md:px-0">Una piattaforma semplice e intuitiva per rispondere a tutte le esigenze di <span>  procurement della tua azienda</span>  </h1>
+            <div class="md:flex row mt-12">
+              <div class="md:w-6/12 md:mr-8">
+                <div class="bg--primary__gray flex-col items-center rounded-xl p-5 overflow-hidden h-600 mx-5 md:mx-0">
+                  <h1 class="text-xl md:text-xl lg:text-2xl md:leading-tight my-5 text-primary md:px-12">Albo Fornitori Digitale</h1>
+                  <p class="text-gray-600 leading-7 md:px-12">
+                    Gestisci in maniera automatizzata il tuo albo fornitori. Con Procurement24Ore puoi censire i fornitori in un clic: scegli se importarli da elenchi preesistenti, registrarli manualmente o invitare il fornitore a compilare la sua scheda anche senza necessità di registrarsi alla piattaforma.</p>       
+                    <div class="hidden md:block">  
+                      <object type="image/svg+xml" data="../../assets/images/1-animazione-fornitori.svg" class="rounded-2xl relative top-20 scale-125	" width="500px" alt="Feature 1">
+                    </object>   
+                  </div>       
                 </div>
-                </div>
-                <div class="accordion-item bg-white">
-                  <h2 class="accordion-header mb-0" id="headingTwo">
-                    <button #switch class="
-                      accordion-button
-                      shadow-none
-                      collapsed
-                      relative
-                      flex
-                      items-center
-                      py-4
-                      px-5
-                      text-base text-gray-800 text-left
-                      bg-white
-                      border-0
-                      rounded-none
-                      transition
-                      focus:outline-none
-                    " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                      aria-controls="collapseTwo">
-                      <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary mr-5">Automazione degli Ordini</h1>
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse w-screen" style="width: 1100px;" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body w-screen py-4 px-5">
-                      <div class="flex container">
-                      <div class="pr-8">
-                        <p class="text-gray-900 leading-7">
-                          Digitalizza interamente il processo di ordine e di acquisto. Perfeziona in modo interattivo gli ordini e accedi al monitoraggio delle capienze residue e delle scadenze; riduci errori e discrepanze nelle entrate merci. Con Procurement24Ore puoi dimenticare blocchi e intoppi nei processi di ordine e di acquisto e ti assicurerai completa trasparenza e tracciabilità delle fasi di negoziazione e perfezionamento degli acquisti.              </p>
-                        <button routerLink="../orders" class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                          Scopri come digitalizziamo gli acquisti <span class="arrow absolute pl-1">→</span>
-                        </button>
-                        <div class="">
-                          <div class="py-8 md:my-0">
-                            <p class="flex font-medium">
-                              <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                              Richieste di Acquisto (RDA)</p>
-                          </div>
-                          <!-- <div class="mp-8 md:my-0">
-                            <p class="flex font-medium">
-                              <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                              Richieste di Offerta (RDO)</p>
-                          </div> -->
-                          <div class="md:my-0">
-                            <p class="flex font-medium">
-                              <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                              Acquisti diretti</p>
-                          </div>
-                        </div>
-                        </div>
-                      <div class="hidden md:block">
-                        <video autoplay onloadedmetadata="this.muted = true" oncanplay="this.play()" width="2000px" class="rounded-2xl shadow-md" loop="true">
-                          <source src="../../assets/images/2-animazione-ordini.mp4"  type='video/mp4'/>
-                        </video>                        
-                      </div>
-                      </div>
-                  </div>
-                  </div>
-                </div>
-                <div class="accordion-item bg-white">
-                  <h2 class="accordion-header mb-0" id="headingThree">
-                    <button #switch class="
-                      accordion-button
-                      collapsed
-                      shadow-none
-                      relative
-                      flex
-                      items-center
-                      py-4
-                      px-5
-                      text-base text-gray-800 text-left
-                      bg-white
-                      border-0
-                      rounded-none
-                      transition
-                      focus:outline-none
-                    " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                      aria-controls="collapseThree">
-                      <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary mr-5">Processi Approvativi Personalizzati </h1>
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse w-screen" style="width: 1100px;" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                  <div class="accordion-body w-screen py-4 px-5">
-                    <div class="flex container">
-                    <div class="pr-8">
-                      <p class="text-gray-900 leading-7">
-                        Gestisci in base alle tue esigenze il flusso approvativo degli ordini. Conclusa la configurazione della RDA, questa può essere sottoposta alla valutazione di uno o più utenti predisposti, a partire dal centro di costo da cui dipende, fino ad arrivare a un super approvatore. Una volta approvata, la richiesta di ordine può essere pubblicata e saranno coinvolti i fornitori.              </p>
-                      <button routerLink="../approval-flow" class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                        Scopri le approvazioni personalizzate <span class="arrow absolute pl-1">→</span>
-                      </button>
-                      <div class="">
-                        <div class="py-8 md:my-0">
-                          <p class="flex font-medium">
-                            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            Processi approvativi personalizzati</p>
-                        </div>
-                        <div class="mp-8 md:my-0">
-                          <p class="flex font-medium">
-                            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            Livelli multipli di approvazione</p>
-                        </div>
-                        <div class="py-8 md:my-0">
-                          <p class="flex font-medium">
-                            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            Approvazioni globali e per centri di costo</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="hidden md:block">
-                        <object type="image/svg+xml" data="../../assets/images/3-animazione-approvazione.svg" class="rounded-2xl relative bg--primary__gray shadow-md" width="400px" alt="Feature 1">
-                        </object>          
-                      </div>
-                    </div>
-                  </div>
+                <div class="bg--primary__gray flex-col items-center rounded-xl p-5 overflow-hidden mt-8 h-600 mx-5 md:mx-0">
+                  <h1 class="text-xl md:text-xl lg:text-2xl md:leading-tight my-5 text-primary md:px-12">Automazione degli Ordini</h1>
+                  <p class="text-gray-600 leading-7 md:px-12">
+                    Digitalizza interamente il processo di ordine e di acquisto. Perfeziona in modo interattivo gli ordini e accedi al monitoraggio delle capienze residue e delle scadenze; riduci errori e discrepanze nelle entrate merci. Con Procurement24Ore puoi dimenticare blocchi e intoppi nei processi di ordine e di acquisto e ti assicurerai completa trasparenza e tracciabilità delle fasi di negoziazione e perfezionamento degli acquisti.              </p>
+                    <div class="hidden md:block">  
+                      <video autoplay onloadedmetadata="this.muted = true" oncanplay="this.play()" width="2000px" class="rounded-2xl" loop="true">
+                        <source src="../../assets/images/2-animazione-ordini.mp4"  type='video/mp4'/>
+                      </video>   
+                  </div>       
                 </div>
               </div>
-              <div class="accordion-item bg-white">
-                <h2 class="accordion-header mb-0" id="headingFour">
-                  <button #switch class="
-                    accordion-button
-                    collapsed
-                    shadow-none
-                    relative
-                    flex
-                    items-center
-                    py-4
-                    px-5
-                    text-base text-gray-800 text-left
-                    bg-white
-                    border-0
-                    rounded-none
-                    transition
-                    focus:outline-none
-                  " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                    aria-controls="collapseFour">
-                    <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary mr-5">Analitiche </h1>
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse w-screen" style="width: 1100px;" aria-labelledby="headingFour"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body w-screen py-4 px-5">
-                    <div class="flex container">
-                    <div class="pr-8">
-                      <p class="text-gray-900 leading-7">
-                        Accedi alla tua dashboard per avere una panoramica generale della situazione gestita dalla piattaforma. Tramite le analitiche puoi consultare i dati che riguardano l’albo fornitori, le RDA, gli ordini, gli utenti che hanno accesso alla piattaforma e i Centri di costo. Scarica le statistiche che riguardano un determinato arco temporale, valuta i fornitori, gli acquisti, i buyer e costruisci una Spend Analysis accurata.              </p>
-                        <button routerLink="../analytics" class="btn--primary mt-4 pr-8 text-sm rounded-md tracking-widest leading-none relative my-4"  type="button">
-                        Scopri le statistiche <span class="arrow absolute pl-1">→</span>
-                      </button>
-                      <div class="">
-                        <div class="py-8 md:my-0">
-                          <p class="flex font-medium">
-                            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            Statistiche per ogni centro di costo</p>
-                        </div>
-                        <div class="mp-8 md:my-0">
-                          <p class="flex font-medium">
-                            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            Dashboard real-time</p>
-                        </div>
-                        <div class="py-8 md:my-0">
-                          <p class="flex font-medium">
-                            <svg width="15" height="11" class="mr-2" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.46998 6.69698L5.46519 10.0354C5.46519 10.0354 6.90169 5.01243 13.7888 1.36218" stroke="#ffbe06" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            Visione completa sulle spese aziendali</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="hidden md:block">
-                      <video autoplay onloadedmetadata="this.muted = true" class="rounded-2xl relative shadow-md" width="2000px" oncanplay="this.play()" loop="true">
+              <div class="md:w-6/12 mt-8 md:mt-0">
+                <div class="bg--primary__gray flex-col items-center rounded-xl  p-5 overflow-hidden h-600 mx-5 md:mx-0">
+                  <h1 class="text-xl md:text-xl lg:text-2xl md:leading-tight my-5 text-primary md:px-12">Processi Approvativi Personalizzati</h1>
+                  <p class="text-gray-600 leading-7 md:px-12">
+                    Gestisci in base alle tue esigenze il flusso approvativo degli ordini. Conclusa la configurazione della RDA, questa può essere sottoposta alla valutazione di uno o più utenti predisposti, a partire dal centro di costo da cui dipende, fino ad arrivare a un super approvatore. Una volta approvata, la richiesta di ordine può essere pubblicata e saranno coinvolti i fornitori.              </p>
+                    <div class="hidden md:block">  
+                      <object type="image/svg+xml" data="../../assets/images/3-animazione-approvazione.svg" class="rounded-2xl relative bg--primary__gray mx-auto my-6" width="400px" alt="Feature 1">
+                      </object>                    
+                  </div>
+                </div>
+                <div class="bg--primary__gray flex-col items-center rounded-xl  p-5 overflow-hidden mt-8 h-600 mx-5 md:mx-0">
+                  <h1 class="text-xl md:text-xl lg:text-2xl md:leading-tight my-5 text-primary md:px-12">Analitiche</h1>
+                  <p class="text-gray-600 leading-7 md:px-12">
+                    Accedi alla tua dashboard per avere una panoramica generale della situazione gestita dalla piattaforma. Tramite le analitiche puoi consultare i dati che riguardano l’albo fornitori, le RDA, gli ordini, gli utenti che hanno accesso alla piattaforma e i Centri di costo. Scarica le statistiche che riguardano un determinato arco temporale, valuta i fornitori, gli acquisti, i buyer e costruisci una Spend Analysis accurata.              </p>
+                    <div class="hidden md:block">  
+                      <video autoplay onloadedmetadata="this.muted = true" class="rounded-2xl relative" width="2000px" oncanplay="this.play()" loop="true">
                         <source src="../../assets/images/4-animazione-analytics.mp4" type='video/mp4'/>    
-                      </video>
-                      </div>
-                    </div>
+                      </video>                 
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            </div>
           </div>
           </div>
         </div>
         <div class="md:py-24 py-12 container mx-auto">
-          <div class="mx-auto">
-            <h1 class="md:px-3 text-3xl  md:text-3xl lg:text-4xl xl:text-5xl md:leading-tight text-primary px-5">Perché <span class="text-gradient">Procurement24Ore</span></h1>
+          <div class="mx-auto flex justify-between">
+            <h1 class="text-3xl  md:text-3xl lg:text-4xl md:leading-tight text-primary">Perché <span>Procurement24Ore</span></h1>
+            <button class="btn--primary hover:font-semibold tracking-widest leading-none relative self-center h-12 bottom-4" routerLink="../onboarding" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
+              Richiedi una demo gratuita
+            </button>
           </div>
-          <div class="md:flex row mt-12">
-            <div class="md:w-4/12 p-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary">Basta disordine</h1>
+          <div class="md:flex row mt-6">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+              <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Basta disordine</h1>
               <p>Gestisci fornitori, ordini e approvazioni da un'unica piattaforma, basta mail, fogli di calcolo e ticket sparsi.</p>
             </div>
-            <div class="md:w-4/12 p-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary">Semplice da usare</h1>
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl md:mx-8 h-200">
+              <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Semplice da usare</h1>
               <p>Grazie a un'interfaccia leggera e immediata il tuo team può iniziare a usare la piattaforma immediatamente.</p>
             </div>
-            <div class="md:w-4/12 p-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary">Scambi Immediati</h1>
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+              <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Scambi Immediati</h1>
               <p>Interagisci con tutti gli aspetti della piattaforma attraverso mail, la registrazione alla piattaforma per i tuoi fornitori è opzionale.</p>
             </div>
           </div>
-          <div class="md:flex row md:mt-12">
-            <div class="md:w-4/12 p-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary">Integrabile</h1>
+          <div class="md:flex row md:mt-8">
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+              <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Integrabile</h1>
               <p>Integra la piattaforma con i tuoi sistemi di fatturazione o ERP.</p>
             </div>
-            <div class="md:w-4/12 p-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary">Visione completa</h1>
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl md:mx-8 h-200">
+              <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Visione completa</h1>
               <p>Prendi decisioni in autonomia grazie a un accesso costante alle tue spese.</p>
             </div>
-            <div class="md:w-4/12 p-5">
-              <h1 class="text-xl  md:text-xl lg:text-2xl xl:text-3xl md:leading-tight my-5 text-primary">Multicanale</h1>
+            <div class="md:w-4/12 p-5 bg--primary__gray rounded-xl h-200">
+              <h1 class="text-xl  md:text-xl md:leading-tight mb-5 text-primary">Multicanale</h1>
               <p>Interagisci automaticamente con i tuoi fornitori tramite email, SMS, Whatsapp o Voce.</p>
 
             </div>
           </div>
         </div>
-        <div class="pb-12">
+        <!-- <div>
           <div class="mx-auto container px-5 lg:px-0">
           <div class="md:my-12 rounded-2xl tipiem-bg p-12 text-center">
             <h1 class="text-3xl md:text-xl lg:text-2xl xl:text-3xl md:leading-tight text-white">Scopri come possiamo aiutarti a ottenere controllo totale sugli acquisti aziendali   </h1>
-            <button class="btn--primary rounded-md hover:font-semibold tracking-widest leading-none relative self-center mt-12" routerLink="../onboarding" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
+            <button class="btn--primary hover:font-semibold tracking-widest leading-none relative self-center mt-12" routerLink="../onboarding" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
               Richiedi una demo gratuita
             </button>
           </div>
         </div>
-        </div>
+        </div> -->
         </div>
       </div>
-    <section class="md:mb-24 mb-12 md:px-5">
-      <div class="md:mt-24 mt-12 container relative md:mx-auto">
-        <div class="md:w-7/12 p-5 mx-5 md:mx-0 md:p-12 rounded-2xl relative z-10 tipiem-bg">
+    <section class="md:mb-36 mb-18 md:px-5">
+      <div class="md:mt-12 mt-6 container md:flex relative md:mx-auto">
+        <div class="md:w-8/12 p-5 mx-5 md:mx-0 md:p-12 rounded-xl relative z-10 tipiem-bg md:mr-8">
           <div class="md:px-0 px-2">
               <div class="md:p-0 p-4">
                 <img src="../../assets/images/tipiem-white.svg" alt="tipem log" class="w-6/12 ml-auto -m-10 opacity-50">
@@ -409,21 +200,17 @@
                 <p class=" text-white mt-6 text-xl">THEPROCUREMEN è una squadra di professionisti, formata da Senior Category Specialist, in grado di accompagnare i responsabili degli acquisti nel processo evolutivo richiesto dal mercato. Scopri come trasformare il tuo centro di costo in centro di ricavo.
                 </p>
                 <a href="https://tipiem.procurement24ore.it" target="_blank">
-                  <button class="btn--primary mt-6 text-md rounded-md tracking-widest leading-none relative my-4"  type="button">
+                  <button class="btn--primary mt-6 text-md tracking-widest leading-none relative my-4"  type="button">
                     Scopri i servizi di Theprocuremen
                   </button>
                 </a>
               </div>
             </div>
         </div>
-        <div class="md:w-8/12 mt-12 md:mt-0 right-0 ml-auto relative md:-mb-72 md:-top-72 z-0">
-          <div class="border border-blue-100 rounded-2xl mx-5 md:mx-0 px-5 md:px-0">
-            <div class="md:flex">
-              <div class="md:w-6/12 self-end relative">
-                <div class="relative">
-              </div>
-              </div>
-              <div class="md:w-6/12 relative">
+        <div class="md:w-4/12 mt-12 md:mt-0 right-0 ml-auto relative">
+          
+          <div class="bg--primary__gray flex flex-col justify-center rounded-xl h-full  p-5 overflow-hidden">
+            <div class="flex flex-col justify-between">
                 <div class="text-xl text-primary my-8 uppercase flex">
                   <svg width="24" height="24" class="mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.75 11.7256L4.75 11.7256" stroke="#097a9c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -458,7 +245,6 @@
                   </svg>
                   Energie green rinnovabili
                 </div>
-              </div>
             </div>
           </div>
         </div>

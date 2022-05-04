@@ -8,11 +8,19 @@ $breakpoints: (phone: 640px,
 @include media(">=phone", "<tablet") {
   .hero {
     background-image: url("../../assets/images/herom.png");
+    height: 80%;
+  }
+  .hm {
+    height: 675px;
   }
 }       
 @include media(">=tablet") {
   .hero {
     background-image: url("../../assets/images/hero.png");
+}
+
+.h-600 {
+  height: 600px;
 }
 }
 
@@ -252,4 +260,8 @@ transform: rotate(
   .arrow-object {
       transform: translate3d(4px, 0, 0) !important;
     }
+}
+
+.h-200 {
+  height: 200px;
 }

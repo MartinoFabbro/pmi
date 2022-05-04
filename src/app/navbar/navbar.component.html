@@ -10,7 +10,7 @@
         <p class="mr-1 text-primary">Funzionalità</p>
         <svg class="fill-current h-4 w-4 self-center text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
       </button>
-      <ul class="dropdown-menu self-center absolute hidden p-3 w-96 bg-white z-50 shadow-lg rounded-md">
+      <ul class="dropdown-menu self-center absolute hidden p-3 w-96 bg-white z-50 shadow-lg">
         <a routerLink="suppliers" >
         <li class="rounded hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2" [ngClass]="{'bg-high' : router.url.includes('suppliers')}">
           <div>
@@ -96,7 +96,7 @@
           <p class="mr-1 text-primary">Risorse</p>
           <svg class="fill-current h-4 w-4 self-center text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
         </button>
-        <ul class="dropdown-menu self-center absolute hidden p-3 w-96 bg-white z-50 shadow-lg rounded-md">
+        <ul class="dropdown-menu self-center absolute hidden p-3 w-96 bg-white z-50 shadow-lg">
           <li class="rounded-t hover:bg-gray-50 py-2 px-4 block whitespace-no-wrap cursor-pointer my-2">
             <a routerLink="posts/18576">
             <div>
@@ -138,7 +138,7 @@
         </ul>
       </div>
     <br class="md:hidden block">
-    <button class="btn--secondary__blue rounded-md hover:font-semibold tracking-widest leading-none relative whitespace-pre md:ml-5 self-center" [routerLink]="['onboarding']" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
+    <button class="btn--primary hover:font-semibold tracking-widest leading-none relative whitespace-pre md:ml-5 self-center" [routerLink]="['onboarding']" [queryParams]="{type: 'Demo'}" style="min-width: min-content; height: fit-content;" type="button">
       Richiedi una demo
     </button>
   </div>
