@@ -53,7 +53,7 @@ export class OnboardingComponent implements OnInit, AfterViewInit {
       employeesNumber: new FormControl('', [Validators.required]),
       currentManagement: new FormControl('', [Validators.required]),
       oid: new FormControl('00D09000002Xecz', [Validators.required]),
-      retUrl: new FormControl('https://nifty-wright-9e89ec.netlify.app/onboarding?type=Demo$success=true', [Validators.required])
+      retUrl: new FormControl('https://procurement24ore.it/onboarding?type=Demo$success=true', [Validators.required])
     });
   }
 
@@ -66,9 +66,7 @@ export class OnboardingComponent implements OnInit, AfterViewInit {
   onSubmit() {
     console.log(document.forms['salesforceForm'])
     document.forms['salesforceForm'].submit().then(resp => {
-        console.log('SIIIIII');
       }, error => {
-        console.log('NOOOOO');
       });
 
   }

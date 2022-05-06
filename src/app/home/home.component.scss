@@ -13,6 +13,10 @@ $breakpoints: (phone: 640px,
   .hm {
     height: 675px;
   }
+
+  .w-fit {
+    width: fit-content;
+  }
 }       
 @include media(">=tablet") {
   .hero {
@@ -218,13 +222,6 @@ transform: rotate(
 
 .w-400 {
   width: 400% !important;
-}
-
-
-
-.tipiem-bg {
-  background-image: url("../../assets/images/bgtp.png");
-  background-size: cover;
 }
 
 .prospect {
