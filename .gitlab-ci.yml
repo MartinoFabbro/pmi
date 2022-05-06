@@ -29,7 +29,7 @@ deploy_procurement24ore-landing-page:
   environment:
     name: PROCUREMENT24ORE LANDINGPAGE
     url: 192.168.7.48:4000
-  when: manual
+#  when: manual
   only:
     - master
 
