@@ -9,6 +9,7 @@ build_npm:
   script:
     - npm install
     - ng build
+    - pwd && ls
   artifacts:
     name: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
@@ -17,10 +18,11 @@ build_npm:
 deploy_landing_page:
   stage: deploy
   script:
-    - ssh procland@192.168.7.48 'echo "procland" | [ -d /var/www/pmi/landing/dist ] && sudo -S rm -rf /var/www/pmi/landing/dist'
-    - ssh procland@192.168.7.48 'echo "procland" | [ -d /tmp/dist ] && sudo -S rm -rf /tmp/dist || :'
-    - scp -o stricthostkeychecking=no -r ./dist procland@192.168.7.48:/tmp/
-    - ssh procland@192.168.7.48 'echo "procland" | [ -d /tmp/dist ] && sudo -S cp -ar /tmp/dist /var/www/pmi/landing/'
+    - pwd && ls
+    #- ssh procland@192.168.7.48 'echo "procland" | [ -d /var/www/pmi/landing/dist ] && sudo -S rm -rf /var/www/pmi/landing/dist'
+    #- ssh procland@192.168.7.48 'echo "procland" | [ -d /tmp/dist ] && sudo -S rm -rf /tmp/dist || :'
+    #- scp -o stricthostkeychecking=no -r ./dist procland@192.168.7.48:/tmp/
+    #- ssh procland@192.168.7.48 'echo "procland" | [ -d /tmp/dist ] && sudo -S cp -ar /tmp/dist /var/www/pmi/landing/'
   environment: 
     name: PROCUREMENT24ORE_LANDINGPAGE
     url: 192.168.7.48:4000
