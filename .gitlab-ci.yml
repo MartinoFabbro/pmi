@@ -8,7 +8,7 @@ build_npm:
   stage: build
   script:
     - npm install
-    - ng build
+    - npm run build:prod
     - npx scully --
     - pwd && ls
   artifacts:
