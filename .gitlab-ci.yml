@@ -10,6 +10,7 @@ build_npm:
     - npm install
     - ng add @scullyio/init
     - ng build --prod
+    - npm run build:ssr
 #    - pwd && ls
   artifacts:
     name: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
@@ -20,6 +21,7 @@ build_npm:
 deploy_landing_page:
   stage: deploy
   script:
+    - ssh procland@192.168.10.131 'echo "procland" | [ -d /home/procland/dist ] && rm -rf /home/procland/dist || :'
     - scp -o stricthostkeychecking=no -r ./dist procland@192.168.10.131:/home/procland/
 #    - ssh procland@192.168.7.48 'echo "procland" | [ "$( sudo -S /usr/bin/pm2 status main | grep online )" ] && sudo /usr/bin/pm2 stop main || :'
 #    - ssh procland@192.168.7.48 'echo "procland" | [ -d /var/www/pmi/landing/dist ] && sudo -S rm -rf /var/www/pmi/landing/dist'
