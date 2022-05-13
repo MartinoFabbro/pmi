@@ -20,7 +20,7 @@ build_npm:
 deploy_landing_page:
   stage: deploy
   script:
-    - scp -o stricthostkeychecking=no -r ./dist procland@192.168.10.131  
+    - scp -o stricthostkeychecking=no -r ./dist procland@192.168.10.131:/home/procland/
 #    - ssh procland@192.168.7.48 'echo "procland" | [ "$( sudo -S /usr/bin/pm2 status main | grep online )" ] && sudo /usr/bin/pm2 stop main || :'
 #    - ssh procland@192.168.7.48 'echo "procland" | [ -d /var/www/pmi/landing/dist ] && sudo -S rm -rf /var/www/pmi/landing/dist'
 #    - ssh procland@192.168.7.48 'echo "procland" | [ -d /var/www/pmi/landing/node_modules ] && sudo -S rm -rf /var/www/pmi/landing/node_modules'
