@@ -1,13 +1,16 @@
-<div class="footer relative z-10">
-    <div class="container border-t mx-auto px-5 flex h-80">
+<div class="md:footer relative z-10">
+    <div class="container border-t mx-auto px-5 md:flex h-80">
         <div class="self-center mb-10 md:w-4/12">
         <img src="./assets/images/p24-logo.svg" class="w-64 self-center mt-0.5 pr-2" alt="Logo">
         </div>
-        <div class="self-center mx-5 md:w-2/12">
+        <div class="self-center mx-5 md:w-2/12 flex">
             <ul> 
+
+                <span class="footer-title">Servizi</span> 
+
                 <li class="my-3 text-gray-400 cursor-pointer" routerLink="pricing">Pricing</li>
                 <li class="my-3 text-gray-400">
-                <a href="https://www.niuma.it/blog/" target="_blank">
+                <a routerLink="blog">
                     Blog
                 </a>
                 </li>
@@ -17,12 +20,18 @@
                 </a>
             </li>
             </ul>
+            <ul class="ml-6"> 
+
+                <span class="footer-title">Legal</span> 
+
+                <li class="my-3 text-gray-400 cursor-pointer" routerLink="pricing">Terms</li>
+            </ul>
         </div>
-        <div class="flex relative md:w-6/12 items-baseline self-center flex-wrap">
-            <img src="./assets/images/cert1.png" alt="iso27001" class="w-3/12 relative m-2">
-            <img src="./assets/images/cert2.png" alt="iso9001" class="w-6/12 relative m-2">
-            <img src="./assets/images/cert3.png" alt="sa8000" class="w-6/12 relative m-2">
-            <img src="./assets/images/cert4.png" alt="iso14001" class="w-3/12 relative m-2">
+        <div class="relative md:w-6/12 items-baseline self-center flex-wrap md:justify-end flex my-12 md:my-0 md:mt-0">
+            <img src="./assets/images/cert1.png" alt="iso27001" class="bg--primary__gray p-2 h-16 rounded-xl md:w-3/12 relative m-2">
+            <img src="./assets/images/cert2.png" alt="iso9001" class="bg--primary__gray p-2 py-4 h-16 rounded-xl md:w-6/12 relative m-2">
+            <img src="./assets/images/cert3.png" alt="sa8000" class="bg--primary__gray p-2 h-16 rounded-xl md:w-6/12 relative m-2">
+            <img src="./assets/images/cert4.png" alt="iso14001" class="bg--primary__gray p-2 h-16 rounded-xl md:w-3/12 relative m-2">
         </div>
     </div>
     </div>
