@@ -17,8 +17,11 @@ build_npm:
 deploy_landing_page:
   stage: deploy
   script:
-    - ssh procland@192.168.10.131 'echo "procland" | [ -d /home/procland/dist ] && rm -rf /home/procland/dist || :'
-    - scp -o stricthostkeychecking=no -r ./dist procland@192.168.10.131:/home/procland/
+    - ssh procland@192.168.10.131 'echo "procland" | [ -d /var/www/html ] && sudo -S rm -rf /var/www/html || :'
+    - ssh procland@192.168.10.131 'echo "procland" | [ -d /home/procland/html ] && rm -rf /home/procland/html || :'    
+    - scp -o stricthostkeychecking=no -r ./dist/static procland@192.168.10.131:/home/procland/html
+    - ssh procland@192.168.10.131 'echo "procland" | [ -d /home/procland/html ] && sudo -S mv /home/procland/html /var/www/html || :'
+
 #    - ssh procland@192.168.10.131 'echo "procland" | [ "$( sudo -S /usr/bin/pm2 status main | grep online )" ] && sudo /usr/bin/pm2 stop main || :'
 #    - ssh procland@192.168.10.131 'echo "procland" | [ -d /var/www/pmi/landing/dist ] && sudo -S rm -rf /var/www/pmi/landing/dist'
 #    - ssh procland@192.168.10.131 'echo "procland" | [ -d /var/www/pmi/landing/node_modules ] && sudo -S rm -rf /var/www/pmi/landing/node_modules'
