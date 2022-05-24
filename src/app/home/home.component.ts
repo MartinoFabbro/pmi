@@ -7,6 +7,7 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 import {MatTooltip, TooltipPosition} from '@angular/material/tooltip';
+import {Title} from "@angular/platform-browser";
 
 
 /** Custom options the configure the tooltip's default show/hide delays. */
@@ -31,7 +32,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   emailInputControl: FormControl;
 
-  constructor(private _gsapService: GsapService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) { } // inject service
+  constructor(private _gsapService: GsapService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder, private titleService:Title) { 
+    this.titleService.setTitle("Procurement24Ore");
+  } // inject service
 
   ngAfterViewInit(): void {
     // this.fadeIn1();

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-pricing',
@@ -8,7 +9,9 @@ import {Router} from '@angular/router';
 })
 export class PricingComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor( private router: Router, private titleService:Title) { 
+    this.titleService.setTitle("P24: Pricing");
+  }
 
   ngOnInit(): void {
   }

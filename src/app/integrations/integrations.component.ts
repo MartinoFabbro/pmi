@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-integrations',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntegrationsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("P24: Integrazioni ERP");
+   }
   ngOnInit(): void {
   }
 

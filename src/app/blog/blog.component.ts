@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
 import { NgxSpinnerService } from "ngx-spinner";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-blog',
@@ -11,7 +12,9 @@ export class BlogComponent implements OnInit {
   blogPosts: any;
   errorMessage: any;
 
-  constructor(private blogService: BlogService, private spinner: NgxSpinnerService) { }
+  constructor(private blogService: BlogService, private spinner: NgxSpinnerService, private titleService:Title) { 
+    this.titleService.setTitle("P24: Blog");
+  }
 
   ngOnInit() {
     this.getPosts()

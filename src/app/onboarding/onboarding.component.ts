@@ -2,7 +2,7 @@ import {AfterViewInit, Component, OnInit, TemplateRef, ViewChild} from '@angular
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
-
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-onboarding',
@@ -21,7 +21,10 @@ export class OnboardingComponent implements OnInit, AfterViewInit {
   constructor(private formBuilder: FormBuilder,
               private activatedRoute: ActivatedRoute,
               private router: Router,
-              public dialog: MatDialog) { }
+              public dialog: MatDialog, private titleService:Title) {
+                this.titleService.setTitle("P24: Onboarding");
+
+               }
 
   ngOnInit() {
 
