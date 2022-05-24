@@ -8,6 +8,7 @@ export const config: ScullyConfig = {
   projectName: "pmi",
   spsModulePath: 'YOUR OWN MODULE PATH HERE',
   outDir: './dist/static',
+  puppeteerLaunchOptions: { executablePath: '/opt/google/chrome/chrome', args: ['--no-sandbox', '--disable-setuid-sandbox'] },
   routes: {
   }
 };
